@@ -1,0 +1,21 @@
+{
+  "browser": {},
+  "browserify": {
+    "transform": [
+      "babelify",
+      "aliasify",
+      "browserify-data",
+      "browserify-shim"
+    ]
+  },
+  "aliasify": {
+    "aliases": {
+      "underscore": "lodash"
+    }
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery"
+  },
+  "devDependencies": {},
+  "dependencies": {}
+}
