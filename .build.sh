@@ -25,7 +25,7 @@ if [ $LIVE -eq 1 ]; then
   OPT_COMPOSER="--no-dev --optimize-autoloader"
 fi
 
-gem install scss-lint
+gem install scss_lint
 npm install -g gulp
 
 echo -e "${GREEN}Installing NPM dependencies…${NC}"
