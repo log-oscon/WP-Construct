@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "194675a8886876c138c8369bd6180af5",
+    "hash": "79d80156c635ebd8ada679910393654a",
+    "content-hash": "858c5423e15c6fe4b7c4d9a3428bea69",
     "packages": [
         {
             "name": "composer/installers",
@@ -155,45 +156,6 @@
             "time": "2015-07-18 19:21:59"
         },
         {
-            "name": "premium-wp-plugin/gravityforms",
-            "version": "1.9.14",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:log-oscon/wp-plugin-gravityforms.git",
-                "reference": "bc50ed4198159796a5b85b8edf46567c139c911d"
-            },
-            "suggest": {
-                "premium-wp-plugin/gravityforms-multilingual": "Add multilingual support for Gravity Forms",
-                "premium-wp-plugin/gravityformsactivecampaign": "Gravity Forms ActiveCampaign Add-On",
-                "premium-wp-plugin/gravityformsauthorizenet": "Gravity Forms Authorize.Net Add-On",
-                "premium-wp-plugin/gravityformsaweber": "Gravity Forms AWeber Add-On",
-                "premium-wp-plugin/gravityformscampaignmonitor": "Gravity Forms Campaign Monitor Add-On",
-                "premium-wp-plugin/gravityformscleverreach": "Gravity Forms CleverReach Add-On",
-                "premium-wp-plugin/gravityformscoupons": "Gravity Forms Coupons Add-On",
-                "premium-wp-plugin/gravityformsemma": "Gravity Forms Emma Add-On",
-                "premium-wp-plugin/gravityformsfreshbooks": "Gravity Forms FreshBooks Add-On",
-                "premium-wp-plugin/gravityformsgetresponse": "Gravity Forms GetResponse Add-On",
-                "premium-wp-plugin/gravityformshipchat": "Gravity Forms HipChat Add-On",
-                "premium-wp-plugin/gravityformsmadmimi": "Gravity Forms Mad Mimi Add-On",
-                "premium-wp-plugin/gravityformsmailchimp": "Gravity Forms MailChimp Add-On",
-                "premium-wp-plugin/gravityformspaypal": "Gravity Forms PayPal Payments Standard Add-On",
-                "premium-wp-plugin/gravityformspaypalpaymentspro": "Gravity Forms PayPal Payments Pro Add-On",
-                "premium-wp-plugin/gravityformspaypalpro": "Gravity Forms PayPal Pro Add-On (Legacy)",
-                "premium-wp-plugin/gravityformspolls": "Gravity Forms Polls Add-On",
-                "premium-wp-plugin/gravityformsquiz": "Gravity Forms Quiz Add-On",
-                "premium-wp-plugin/gravityformssignature": "Gravity Forms Signature Add-On",
-                "premium-wp-plugin/gravityformsslack": "Gravity Forms Slack Add-On",
-                "premium-wp-plugin/gravityformsstripe": "Gravity Forms Stripe Add-On",
-                "premium-wp-plugin/gravityformssurvey": "Gravity Forms Survey Add-On",
-                "premium-wp-plugin/gravityformstwilio": "Gravity Forms Twilio SMS Add-On",
-                "premium-wp-plugin/gravityformsuserregistration": "Gravity Forms User Registration Add-On",
-                "premium-wp-plugin/gravityformszapier": "Gravity Forms Zapier Add-On"
-            },
-            "type": "wordpress-plugin",
-            "description": "Gravity Forms",
-            "time": "2015-10-08 13:30:45"
-        },
-        {
             "name": "premium-wp-theme/genesis",
             "version": "2.2.3",
             "source": {
@@ -274,15 +236,15 @@
         },
         {
             "name": "wpackagist-plugin/akismet",
-            "version": "3.1.5",
+            "version": "3.1.6",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.1.5"
+                "reference": "tags/3.1.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -391,26 +353,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
-        },
-        {
-            "name": "wpackagist-plugin/ricg-responsive-images",
-            "version": "3.1.0",
-            "source": {
-                "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/ricg-responsive-images/",
-                "reference": "tags/3.1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/ricg-responsive-images.3.1.0.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/ricg-responsive-images/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
@@ -529,16 +471,16 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.7.6",
+            "version": "v2.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "f8ab957c17e4b85a73c4df03bdf94ee597f2bd55"
+                "reference": "5f1e2ebd1044da542d2b9510527836e8be92b1cb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/f8ab957c17e4b85a73c4df03bdf94ee597f2bd55",
-                "reference": "f8ab957c17e4b85a73c4df03bdf94ee597f2bd55",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/5f1e2ebd1044da542d2b9510527836e8be92b1cb",
+                "reference": "5f1e2ebd1044da542d2b9510527836e8be92b1cb",
                 "shasum": ""
             },
             "require": {
@@ -547,13 +489,16 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
                     "Symfony\\Component\\Stopwatch\\": ""
-                }
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -571,7 +516,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2015-10-12 12:42:24"
+            "time": "2015-10-30 20:15:42"
         },
         {
             "name": "wpackagist-plugin/genesis-visual-hook-guide",
@@ -594,16 +539,56 @@
             "homepage": "https://wordpress.org/plugins/genesis-visual-hook-guide/"
         },
         {
-            "name": "wpackagist-plugin/wp-hydra",
-            "version": "1.0.3",
+            "name": "wpackagist-plugin/redis-cache",
+            "version": "1.2.1",
             "source": {
                 "type": "svn",
-                "url": "http://plugins.svn.wordpress.org/wp-hydra/",
-                "reference": "tags/1.0.3"
+                "url": "http://plugins.svn.wordpress.org/redis-cache/",
+                "reference": "tags/1.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-hydra.1.0.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.1.2.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/redis-cache/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-importer",
+            "version": "0.6.1",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-importer/",
+                "reference": "tags/0.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-importer/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-hydra",
+            "version": "1.0.4",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-hydra/",
+                "reference": "tags/1.0.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-hydra.1.0.4.zip",
                 "reference": null,
                 "shasum": null
             },

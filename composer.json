@@ -32,8 +32,10 @@
     },
     "require-dev": {
         "rarst/laps": "~1.2",
+        "wpackagist-plugin/genesis-visual-hook-guide": "^0.9.5",
+        "wpackagist-plugin/redis-cache": "^1.2",
         "wpackagist-plugin/wp-hydra": "~1.0",
-        "wpackagist-plugin/genesis-visual-hook-guide": "^0.9.5"
+        "wpackagist-plugin/wordpress-importer": "^0.6.1"
     },
     "extra": {
         "installer-paths": {
