@@ -23,7 +23,7 @@
         "wp-sync-db/wp-sync-db": "dev-master",
         "wp-sync-db/wp-sync-db-media-files": "dev-master",
         "wpackagist-plugin/akismet": "~3.0",
-        "wpackagist-plugin/autoptimize": "~1.9",
+        "wpackagist-plugin/autoptimize": "~2.0",
         "wpackagist-plugin/black-studio-tinymce-widget": "~2.2",
         "wpackagist-plugin/disable-emojis": "~1.5",
         "wpackagist-plugin/force-regenerate-thumbnails": "~2.0",
