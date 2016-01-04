@@ -23,6 +23,8 @@ echo "Setting up a local ${TITLE} project for development..."
 
 sudo apt-get -y install graphicsmagick redis-server php5-redis
 sudo service php5-fpm restart
+sudo gem install scss_lint
+sudo npm install -g gulp
 
 noroot ./.build.sh
 
