@@ -17,7 +17,7 @@ import watchify from 'watchify';
 import config from '../config';
 import bundleLogger from '../util/bundle-logger';
 import handleErrors from '../util/handle-errors';
-import {dependencies} from '../../package.json';
+import {dependencies} from '../../../../../package.json';
 
 let bundleQueue = config.browserify.bundleConfigs.length;
 
