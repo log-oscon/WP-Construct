@@ -63,3 +63,18 @@ add_filter( 'autoptimize_js_include_inline', '__return_false' );
         $exclude,
     ) );
 } );
+
+
+/**
+ * Fix Domain Mapping URLs.
+ */
+function annoyance_domain_mapping_plugins_uri( $full_url, $path = null, $plugin = null ) {
+    return str_replace( get_original_url( 'siteurl' ), get_option( 'siteurl' ), $full_url );
+}
+
+if ( defined( 'DOMAIN_MAPPING' ) ) {
+	add_action( 'plugins_loaded', function () {
+	    remove_filter( 'plugins_url', 'domain_mapping_plugins_uri', 1 );
+	    add_filter( 'plugins_url', 'annoyance_domain_mapping_plugins_uri', 1 );
+	} );
+}
