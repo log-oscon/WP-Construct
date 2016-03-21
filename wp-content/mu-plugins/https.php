@@ -46,6 +46,6 @@ function embed_oembed_html( $cache, $url, $attr, $post_ID ) {
     return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $cache ) : $cache;
 }
 
-\add_filter( 'wp_calculate_image_srcset', '\logoscon\WP\HTTPS\wp_calculate_image_srcset' 10, 1 );
-\add_filter( 'oembed_result',             '\logoscon\WP\HTTPS\secure_oembed_result',     10, 3 );
-\add_filter( 'embed_oembed_html',         '\logoscon\WP\HTTPS\secure_embed_oembed_html', 10, 4 );
+\add_filter( 'wp_calculate_image_srcset', '\logoscon\WP\HTTPS\wp_calculate_image_srcset', 10, 1 );
+\add_filter( 'oembed_result',             '\logoscon\WP\HTTPS\secure_oembed_result',      10, 3 );
+\add_filter( 'embed_oembed_html',         '\logoscon\WP\HTTPS\secure_embed_oembed_html',  10, 4 );
