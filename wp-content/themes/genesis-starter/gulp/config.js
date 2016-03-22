@@ -34,7 +34,10 @@ export default {
     dest,
   },
   images: {
-    src: src + '/images/**',
+    src: [
+      src + '/images/**',
+      '!' + src + '/images/svg-sprite'
+    ],
     dest: dest + '/images',
     settings: {
       svgoPlugins: [
@@ -49,6 +52,7 @@ export default {
       ]
     }
   },
+  svgSpriteSrc: 'svg-sprite/**/*.svg',
   svgSprite: {
     svg: {
       rootAttributes: {
@@ -58,8 +62,10 @@ export default {
       }
     },
     mode: {
+      inline: true,
       symbol: {
-        sprite: 'sprites.svg'
+        dest: '',
+        sprite: 'sprite.svg'
       }
     }
   },

@@ -10,7 +10,7 @@ const filterRetina = filter('**/*@2x.*', {
   restore: true
 });
 
-const filterSvg = filter('**/*.svg', {
+const filterSvgSprite = filter(config.svgSpriteSrc, {
   restore: true
 });
 
@@ -21,9 +21,9 @@ gulp.task('images', () =>
       .pipe(gulp.dest(config.images.dest))
       .pipe(unretina())
       .pipe(filterRetina.restore)
-    .pipe(filterSvg)
+    .pipe(filterSvgSprite)
       .pipe(svgSprite(config.svgSprite))
-      .pipe(filterSvg.restore)
+      .pipe(filterSvgSprite.restore)
     .pipe(imagemin(config.images.settings))
     .pipe(gulp.dest(config.images.dest))
 );
