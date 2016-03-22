@@ -52,6 +52,7 @@ export default {
       ]
     }
   },
+  svgSpriteSrc: 'svg-sprite/**/*.svg',
   svgSprite: {
     svg: {
       rootAttributes: {

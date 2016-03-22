@@ -10,7 +10,7 @@ const filterRetina = filter('**/*@2x.*', {
   restore: true
 });
 
-const filterSvgSprite = filter('svg-sprite/**/*.svg', {
+const filterSvgSprite = filter(config.svgSpriteSrc, {
   restore: true
 });
 
