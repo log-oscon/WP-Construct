@@ -37,11 +37,20 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Setup theme
 \add_action( 'after_setup_theme', function () {
-	$scripts    = new \Genesis_Starter\Scripts();
-	$styles     = new \Genesis_Starter\Styles();
-	$shortcodes = new \Genesis_Starter\Shortcodes();
+	$components = array(
+		'scripts'    => new \Patricia\Scripts(),
+		'shortcodes' => new \Patricia\Shortcodes(),
+		'styles'     => new \Patricia\Styles(),
+	);
 
-	$scripts->ready();
-	$styles->ready();
-	$shortcodes->ready();
+	// Excluded components
+	$exclude = \apply_filters( 'gs_exclude_components', array() );
+
+	foreach ( $components as $name => $instance ) {
+		if ( in_array( $name, $exclude, true ) ) {
+			continue;
+		}
+
+		$instance->ready();
+	}
 } );
