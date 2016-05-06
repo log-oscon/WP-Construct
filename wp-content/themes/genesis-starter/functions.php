@@ -38,9 +38,9 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 //* Setup theme
 \add_action( 'after_setup_theme', function () {
 	$components = array(
-		'scripts'    => new \Patricia\Scripts(),
-		'shortcodes' => new \Patricia\Shortcodes(),
-		'styles'     => new \Patricia\Styles(),
+		'scripts'    => new \Genesis_Starter\Scripts(),
+		'shortcodes' => new \Genesis_Starter\Shortcodes(),
+		'styles'     => new \Genesis_Starter\Styles(),
 	);
 
 	// Excluded components
