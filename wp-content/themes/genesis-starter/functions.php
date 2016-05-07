@@ -37,11 +37,22 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Setup theme
 \add_action( 'after_setup_theme', function () {
-	$scripts    = new \Genesis_Starter\Scripts();
-	$styles     = new \Genesis_Starter\Styles();
-	$shortcodes = new \Genesis_Starter\Shortcodes();
+	$components = array(
+		'scripts'    => new \Genesis_Starter\Scripts(),
+		'shortcodes' => new \Genesis_Starter\Shortcodes(),
+		'styles'     => new \Genesis_Starter\Styles(),
+	);
 
-	$scripts->ready();
-	$styles->ready();
-	$shortcodes->ready();
+	/**
+	 * Remove/Add components
+	 *
+	 * Note: if you add a component, make sure it implements a method "ready()".
+	 */
+	$components = \apply_filters( 'genesis_starter_components', $components );
+
+	foreach ( $components as $name => $instance ) {
+		if ( method_exists( $instance, 'ready' ) ) {
+			$instance->ready();
+		}
+	}
 } );
