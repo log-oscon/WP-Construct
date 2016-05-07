@@ -62,6 +62,10 @@ PHP
 
     noroot wp core install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL"
 
+    ## CREATE advanced-cache.php FILE ##
+
+    noroot touch wp-content/advanced-cache.php
+
     ## ACTIVATING COMPONENTS ##
 
     echo " * Activating the default theme"
