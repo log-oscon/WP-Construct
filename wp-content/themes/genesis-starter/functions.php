@@ -43,14 +43,16 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 		'styles'     => new \Genesis_Starter\Styles(),
 	);
 
-	// Excluded components
-	$exclude = \apply_filters( 'gs_exclude_components', array() );
+	/**
+	 * Remove/Add components
+	 *
+	 * Note: if you add a component, make sure it implements a method "ready()".
+	 */
+	$components = \apply_filters( 'genesis_starter_components', $components );
 
 	foreach ( $components as $name => $instance ) {
-		if ( in_array( $name, $exclude, true ) ) {
-			continue;
+		if ( method_exists( $instance, 'ready' ) ) {
+			$instance->ready();
 		}
-
-		$instance->ready();
 	}
 } );
