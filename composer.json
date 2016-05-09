@@ -19,6 +19,7 @@
     ],
     "require": {
         "goblindegook/syllables": "~0.3",
+        "premium-wp-plugin/advanced-custom-fields-pro": "^5.3",
         "premium-wp-theme/genesis": "~2.1",
         "wp-sync-db/wp-sync-db": "dev-master",
         "wp-sync-db/wp-sync-db-media-files": "dev-master",
@@ -28,8 +29,7 @@
         "wpackagist-plugin/disable-emojis": "~1.5",
         "wpackagist-plugin/force-regenerate-thumbnails": "~2.0",
         "wpackagist-plugin/google-analytics-for-wordpress": "~5.3",
-        "wpackagist-plugin/wordpress-seo": "~3.0",
-        "premium-wp-plugin/advanced-custom-fields-pro": "^5.3"
+        "wpackagist-plugin/wordpress-seo": "~3.0"
     },
     "require-dev": {
         "rarst/laps": "~1.2",
