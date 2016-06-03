@@ -32,7 +32,7 @@ echo -e "${GREEN}Installing NPM dependencies…${NC}"
 npm install
 
 echo -e "${GREEN}Building theme…${NC}"
-cd "$ROOT/wp-content/themes/rtp-arena"
+cd "$ROOT/wp-content/themes/genesis-starter"
 npm install
 composer install --no-interaction $OPT_COMPOSER
 npm run build
