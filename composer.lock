@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e402aa5a5c5814da9dd3474386b55f6d",
-    "content-hash": "253d43ff76b7a6d19446503e4511165c",
+    "hash": "f6617e0fc9f2c51fb86b6799d46ba665",
+    "content-hash": "de379f1203909b0661da6003b0e99cd7",
     "packages": [
         {
             "name": "composer/installers",
@@ -546,7 +546,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/genesis-visual-hook-guide.zip",
-                "reference": "trunk",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -566,7 +566,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/redis-cache.1.3.2.zip",
-                "reference": "tags/1.3.2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -586,7 +586,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.2.zip",
-                "reference": "tags/0.6.2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -606,7 +606,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-hydra.1.1.zip",
-                "reference": "tags/1.1",
+                "reference": null,
                 "shasum": null
             },
             "require": {

@@ -13,7 +13,7 @@
 
     WHOAMI=`whoami`
 
-    ROOT_DIR=`pwd`
+    ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
     BUILD_DIR="$ROOT_DIR/.deploy_build"
     DIST_DIR="$ROOT_DIR/.deploy_kinsta"
 

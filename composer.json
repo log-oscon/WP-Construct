@@ -29,7 +29,8 @@
         "wpackagist-plugin/disable-emojis": "~1.5",
         "wpackagist-plugin/force-regenerate-thumbnails": "~2.0",
         "wpackagist-plugin/google-analytics-for-wordpress": "~5.3",
-        "wpackagist-plugin/wordpress-seo": "~3.0"
+        "wpackagist-plugin/wordpress-seo": "~3.0",
+        "composer-plugin-api": "^1.1"
     },
     "require-dev": {
         "rarst/laps": "~1.2",
