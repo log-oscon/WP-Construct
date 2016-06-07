@@ -13,8 +13,7 @@
 
     WHOAMI=`whoami`
 
-    ROOT_DIR=`pwd`
-    CLONE_DIR="$ROOT_DIR/.deploy_clone"
+    ROOT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
     DEPLOY_DIR="$ROOT_DIR/.deploy_wpengine"
 
     DEPLOY_ENV="staging"
@@ -37,24 +36,23 @@
 
     echo -e "${YELLOW}Cleaning up...${RESET}"
 
-    rm -rf "$CLONE_DIR"
     rm -rf "$DEPLOY_DIR"
 
     # VALIDATIONS
 
     echo -e "Checking you have a Git user setup..."
     if [[ $(git config --list) != *user.email* || $(git config --list) != *user.name* ]]; then
-        git config --global user.name "log.OSCON"
-        git config --global user.email "engenharia@log.pt"
+        git config --global user.name "Codeship"
+        git config --global user.email "deployment@codeship.com"
     fi
 
     if [ -z "$COMMIT_MSG" ]; then
-        echo -e "${RED}Please provide a commit message, e.g. 'sh .deploy-wpengine.sh -m \"Phase 2 beta\"'${RESET}"
+        echo -e "${RED}Please provide a commit message, e.g. 'sh .deploy-codeship-wpengine.sh -m \"Phase 2 beta\"'${RESET}"
         exit 1
     fi
 
     if [ -z "$SITENAME" ]; then
-        echo -e "${RED}Please provide a site name within WP Engine, this will control the Git repo we clone and commit to, e.g. 'sh .deploy-wpengine.sh -s \"sitename\"'${RESET}"
+        echo -e "${RED}Please provide a site name within WP Engine, this will control the Git repo we clone and commit to, e.g. 'sh _deploy-wpengine.sh -s \"sitename\"'${RESET}"
         exit 2
     fi
 
@@ -70,20 +68,6 @@
     # DEPLOY THE PROJECT
     # ==================
 
-    echo -e "${YELLOW}Cloning the project for deployment...${RESET}"
-
-    # Get around Codeship's shallow clones:
-    git pull --unshallow
-
-    git clone --recursive "$ROOT_DIR" "$CLONE_DIR"
-
-    if [ 0 != $? ]; then
-        echo -e "${RED}There was an error cloning the repository.${RESET}"
-        exit 4
-    fi
-
-    cd "$CLONE_DIR"
-
     echo -e "${YELLOW}Fetching and merging source files...${RESET}"
 
     git clone "git@git.wpengine.com:${DEPLOY_ENV}/${SITENAME}.git" "$DEPLOY_DIR"
@@ -93,13 +77,7 @@
         exit 5
     fi
 
-    rsync -av --delete --exclude-from "${CLONE_DIR}/.wpignore" --exclude ".git/" "${CLONE_DIR}/" "${DEPLOY_DIR}/"
-
-    cp "$DEPLOY_DIR/.wpignore" "$DEPLOY_DIR/.gitignore"
-
     echo -e "${YELLOW}Building the project for deployment...${RESET}"
-
-    cd "$DEPLOY_DIR"
 
     bash .build.sh -l
 
@@ -108,10 +86,13 @@
         exit 6
     fi
 
-    find vendor/ -type d -name ".git" -exec rm -rf {} \;
-    find wp-content/ -type d -name ".git" -exec rm -rf {} \;
+    rsync -av --delete --exclude-from "${ROOT_DIR}/.wpignore" --exclude ".git/" "${ROOT_DIR}/" "${DEPLOY_DIR}/"
+
+    cp "$DEPLOY_DIR/.wpignore" "$DEPLOY_DIR/.gitignore"
 
     echo -e "${YELLOW}Creating a Git commit for the changes...${RESET}"
+
+    cd "${DEPLOY_DIR}/"
 
     git add -A . # Add all the things! Even the deleted things!
     git commit -am "$COMMIT_MSG"
@@ -130,7 +111,7 @@
 
     echo -e "${YELLOW}Cleaning up...${RESET}"
 
-    rm -rf "$CLONE_DIR"
+    cd "${ROOT_DIR}/"
     rm -rf "$DEPLOY_DIR"
 
     echo -e "${GREEN}All done.${RESET}"

@@ -2,7 +2,7 @@
 
 set -e
 
-ROOT=`pwd`
+ROOT=$(cd "$(dirname "${BASH_SOURCE[0]}")" && cd .. && pwd)
 LIVE=0
 
 OPT_COMPOSER=""
@@ -25,17 +25,14 @@ if [ $LIVE -eq 1 ]; then
   OPT_COMPOSER="--no-dev --optimize-autoloader"
 fi
 
-gem install scss_lint
-npm install -g gulp
+echo -e "${GREEN}Installing Composer dependencies…${NC}"
+composer install --no-interaction $OPT_COMPOSER
 
 echo -e "${GREEN}Installing NPM dependencies…${NC}"
 npm install
-
-echo -e "${GREEN}Installing Composer dependencies…${NC}"
-composer install --no-interaction $OPT_COMPOSER
 
 echo -e "${GREEN}Building theme…${NC}"
 cd "$ROOT/wp-content/themes/genesis-starter"
 npm install
 composer install --no-interaction $OPT_COMPOSER
-gulp build
+npm run build
