@@ -26,7 +26,7 @@ sudo service php5-fpm restart
 sudo gem install scss_lint
 sudo npm install -g gulp npm@latest-2
 
-noroot ./.build.sh
+noroot ./.scripts/build.sh
 
 if ! $(noroot wp core is-installed); then
 
