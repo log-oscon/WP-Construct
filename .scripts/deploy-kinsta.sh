@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Intended to deploy a Composer controlled repo to WP Engine.
+# Intended to deploy a Composer controlled repo to Kinsta.
 #
-# Usage: ./deploy-insta.sh -s sitename -l
+# Usage: ./deploy-kinsta.sh -s sitename -l
 
 # TODO: Handle Git submodules
 
