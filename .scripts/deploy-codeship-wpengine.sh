@@ -1,8 +1,11 @@
 #!/bin/bash
 
-# Intended to deploy a Composer controlled repo to WP Engine.
+# Intended to deploy a Composer controlled repo via Codeship to WP Engine.
 #
-# Usage: ./deploy-wpengine.sh -m <commit message> -s <site> [--live]
+# Codeship is used as the Continuous Integration (CI) tool in this case, but it
+# may easily work with other services.
+#
+# Usage: ./deploy-codeship-wpengine.sh -m <commit message> -s <site> [--live]
 
 # TODO: Handle Git submodules
 
