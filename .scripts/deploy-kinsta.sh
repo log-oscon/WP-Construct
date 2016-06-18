@@ -2,7 +2,7 @@
 
 # Intended to deploy a Composer controlled repo to Kinsta.
 #
-# Usage: ./deploy-kinsta.sh -s sitename -l
+# Usage: ./.scripts/deploy-kinsta.sh -s sitename -l
 
 # TODO: Handle Git submodules
 
@@ -78,7 +78,7 @@
 
     echo -e "${YELLOW}Building the project for deployment...${RESET}"
 
-    bash .build.sh -l
+    bash .scripts/build.sh -l
 
     if [ 0 != $? ]; then
         echo -e "${RED}There was an error building the project.${RESET}"
