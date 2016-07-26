@@ -80,6 +80,10 @@
         exit 5
     fi
 
+    echo -e "${YELLOW}Disable xdebug...${RESET}"
+
+   rm -f /home/rof/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+
     echo -e "${YELLOW}Building the project for deployment...${RESET}"
 
     bash .build.sh -l
