@@ -1,9 +1,10 @@
 /**
  * Add event listener.
  *
- * @param  {DOMElement} element  DOM element to attach event to.
- * @param  {String}     event    Event name.
- * @param  {Function}   callback Event handler.
+ * @since 1.0.0
+ * @param {DOMElement} element  DOM element to attach event to.
+ * @param {String}     event    Event name.
+ * @param {Function}   callback Event handler.
  */
 function on(element, event, callback) {
   if (element.addEventListener) {
@@ -16,8 +17,8 @@ function on(element, event, callback) {
 /**
  * Fetch CSS from localStorage.
  *
+ * @since  1.0.0
  * @param  {String} key Cache key.
- *
  * @return {String}     Cached CSS contents.
  */
 function getCache(key) {
@@ -27,6 +28,7 @@ function getCache(key) {
 /**
  * Cache CSS in localStorage.
  *
+ * @since 1.0.0
  * @param {String} key  Cache key.
  * @param {String} url  Cached URL.
  * @param {String} text Cached URL contents.
@@ -39,10 +41,10 @@ function putCache(key, url, text) {
 /**
  * Check whether the URL is in cache.
  *
- * @param  {String}  key Cache key.
- * @param  {String}  url URL to check.
- *
- * @return {Boolean}     Whether the URL is in cache.
+ * @since  1.0.0
+ * @param  {String} key Cache key.
+ * @param  {String} url URL to check.
+ * @return {Boolean}    Whether the URL is in cache.
  */
 function isCached(key, url) {
   return window.localStorage && window.localStorage['cssCacheUrl_' + key] === url;
@@ -51,6 +53,7 @@ function isCached(key, url) {
 /**
  * Inject raw styles inline.
  *
+ * @since 1.0.0
  * @param {String} text Inline style block.
  */
 function injectStyleText(text) {
@@ -71,6 +74,7 @@ function injectStyleText(text) {
  *
  * The URL must be in the same domain as the loading application.
  *
+ * @since 1.0.0
  * @param {String} url Stylesheet URL.
  */
 function injectStyle(key, url) {
@@ -106,6 +110,7 @@ function injectStyle(key, url) {
 /**
  * Require a (possibly cached) CSS URL for injection.
  *
+ * @since 1.0.0
  * @param {String} key Cache key.
  * @param {String} url URL for the required CSS.
  */
