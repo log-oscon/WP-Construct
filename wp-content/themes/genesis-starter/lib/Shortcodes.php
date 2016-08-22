@@ -29,9 +29,10 @@ class Shortcodes {
 	/**
 	 * Replaces the current shortcode function with the provided callback.
 	 * 
-	 * @since 1.0.0
-	 * @param string   $tag      Shortcode tag.
-	 * @param callable $callback Shortcode callback.
+	 * @since  1.0.0
+	 * @access private
+	 * @param  string   $tag      Shortcode tag.
+	 * @param  callable $callback Shortcode callback.
 	 */
 	private function replace_shortcode( $tag, $callback ) {
 		\remove_shortcode( $tag );
