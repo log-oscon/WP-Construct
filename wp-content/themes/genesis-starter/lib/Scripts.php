@@ -6,18 +6,24 @@ class Scripts {
 
 	/**
 	 * Base URL for public assets.
-	 * @var string
+	 * 
+	 * @since 1.0.0
+	 * @var   string
 	 */
 	private $base_uri;
 
 	/**
 	 * List of CSS assets to cache in localStorage.
-	 * @var array
+	 * 
+	 * @since 1.0.0
+	 * @var   array
 	 */
 	private $cached_styles;
 
 	/**
 	 * Constructor.
+	 * 
+	 * @since 1.0.0
 	 */
 	public function __construct() {
 		$this->base_uri = \get_stylesheet_directory_uri() . '/public/';
@@ -29,6 +35,8 @@ class Scripts {
 
 	/**
 	 * Setup hooks.
+	 * 
+	 * @since 1.0.0
 	 */
 	public function ready() {
 		\add_action( 'wp_enqueue_scripts', array( $this, 'enqueue' ) );
@@ -40,6 +48,8 @@ class Scripts {
 	 * Enqueue scripts.
 	 *
 	 * Fired on `wp_enqueue_scripts`.
+	 * 
+	 * @since 1.0.0
 	 */
 	public function enqueue() {
 		\wp_enqueue_script( 'jquery-core' );
@@ -62,6 +72,8 @@ class Scripts {
 
 	/**
 	 * Include deferred font loading script in the header.
+	 * 
+	 * @since 1.0.0
 	 */
 	public function inline() {
 		?>
@@ -83,11 +95,11 @@ class Scripts {
 	/**
 	 * Defer script loading.
 	 *
+	 * @since  1.0.0
 	 * @param  string $tag    Script HTML tag.
 	 * @param  string $handle Script handle.
 	 * @param  string $src    Script URL.
-	 *
-	 * @return string      Filteredd script HTML tag.
+	 * @return string         Filteredd script HTML tag.
 	 */
 	public function async( $tag, $handle, $src ) {
 
@@ -107,5 +119,4 @@ class Scripts {
 
 		return str_replace( "$src'", "$src' async", $tag );
 	}
-
 }
