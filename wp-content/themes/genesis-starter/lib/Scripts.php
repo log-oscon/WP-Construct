@@ -73,7 +73,7 @@ class Scripts {
 		<noscript>
 			<?php foreach ( $this->cached_styles as $href ) { ?>
 				<link rel="stylesheet" type="text/css" media="all"
-					href="<?php echo esc_url( $href ) ?>">
+					href="<?php echo \esc_url( $href ) ?>">
 			<?php } ?>
 		</noscript>
 		<!--/noptimize-->
