@@ -2,7 +2,7 @@
 /**
  * Plugin Name: HTTPS
  * Description: Fixes and improves HTTPS support.
- * Version:     1.0.0
+ * Version:     2.0.0
  * Author:      log.OSCON, Lda.
  * Author URI:  https://log.pt/
  * License:     GPL-2.0+
@@ -13,8 +13,9 @@ namespace logoscon\WP\HTTPS;
 /**
  * Force URLs in srcset attributes into HTTPS scheme.
  *
- * @param     array    $sources    Source data to include in the 'srcset'.
- * @return    array                Possibly-modified source data.
+ * @since  1.0.0
+ * @param  array $sources Source data to include in the 'srcset'.
+ * @return array          Possibly-modified source data.
  */
 function wp_calculate_image_srcset( $sources ) {
 	foreach ( $sources as &$source ) {
@@ -25,25 +26,27 @@ function wp_calculate_image_srcset( $sources ) {
 
 /**
  * Replace http:// with https:// in the embed code (before caching).
- * 
+ *
+ * @since  2.0.0
  * @param string $data The returned oEmbed HTML.
  * @param string $url  URL of the content to be embedded.
  * @param array  $args Optional arguments, usually passed from a shortcode.
  */
-function oembed_result( $data, $url, $args ) {
-    return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $data ) : $data;
+function secure_oembed_result( $data, $url, $args ) {
+	return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $data ) : $data;
 }
 
 /**
  * Replace http:// with https:// in the embed code (after caching).
- * 
+ *
+ * @since  2.0.0
  * @param mixed  $cache   The cached HTML result, stored in post meta.
  * @param string $url     The attempted embed URL.
  * @param array  $attr    An array of shortcode attributes.
  * @param int    $post_ID Post ID.
  */
-function embed_oembed_html( $cache, $url, $attr, $post_ID ) {
-    return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $cache ) : $cache;
+function secure_embed_oembed_html( $cache, $url, $attr, $post_ID ) {
+	return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $cache ) : $cache;
 }
 
 \add_filter( 'wp_calculate_image_srcset', '\logoscon\WP\HTTPS\wp_calculate_image_srcset', 10, 1 );
