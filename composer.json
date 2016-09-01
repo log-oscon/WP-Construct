@@ -19,8 +19,8 @@
     ],
     "require": {
         "goblindegook/syllables": "~0.3",
-        "premium-wp-plugin/advanced-custom-fields-pro": "^5.3",
-        "premium-wp-theme/genesis": "~2.1",
+        "premium-wp-plugin/advanced-custom-fields-pro": "^5.4",
+        "premium-wp-theme/genesis": "~2.3",
         "wp-sync-db/wp-sync-db": "dev-master",
         "wp-sync-db/wp-sync-db-media-files": "dev-master",
         "wpackagist-plugin/akismet": "~3.1",
