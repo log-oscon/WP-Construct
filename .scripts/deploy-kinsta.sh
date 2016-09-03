@@ -78,7 +78,7 @@
 
     echo -e "${YELLOW}Building the project for deployment...${RESET}"
 
-    bash .build.sh -l
+    bash build.sh -l
 
     if [ 0 != $? ]; then
         echo -e "${RED}There was an error building the project.${RESET}"

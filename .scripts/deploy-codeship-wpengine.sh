@@ -82,11 +82,11 @@
 
     echo -e "${YELLOW}Disable xdebug...${RESET}"
 
-   rm -f /home/rof/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
+    rm -f /home/rof/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini
 
     echo -e "${YELLOW}Building the project for deployment...${RESET}"
 
-    bash .build.sh -l
+    bash build.sh -l
 
     if [ 0 != $? ]; then
         echo -e "${RED}There was an error building the project.${RESET}"
