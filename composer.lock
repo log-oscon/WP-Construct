@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f6617e0fc9f2c51fb86b6799d46ba665",
-    "content-hash": "de379f1203909b0661da6003b0e99cd7",
+    "hash": "043ce42efd791b189f4292243ee7fe9f",
+    "content-hash": "2f7664c5a97c00a9210746a3fdb3d094",
     "packages": [
         {
             "name": "composer/installers",
@@ -159,33 +159,317 @@
         },
         {
             "name": "premium-wp-plugin/advanced-custom-fields-pro",
-            "version": "5.3.7",
+            "version": "5.4.2",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:log-oscon/wp-plugin-advanced-custom-fields-pro.git",
-                "reference": "403df72942b1de45e73ae11eb60f242c426aaf54"
+                "reference": "4e3eb85468114708f1f83e88fe14b98a4ea3155c"
             },
             "type": "wordpress-plugin",
             "license": [
                 "GPL-2.0+"
             ],
             "description": "Advanced Custom Fields Pro",
-            "time": "2016-05-06 12:04:21"
+            "time": "2016-08-18 11:40:06"
         },
         {
             "name": "premium-wp-theme/genesis",
-            "version": "2.2.7",
+            "version": "2.3.1",
             "source": {
                 "type": "git",
                 "url": "git@bitbucket.org:log-oscon/wp-theme-genesis.git",
-                "reference": "9070edb8e916cb759f251676b15e388f25381685"
+                "reference": "81fb5a283c42b6b99f1e94594bf17c9d73d91614"
             },
             "type": "wordpress-theme",
             "license": [
                 "GPL 2.0+"
             ],
             "description": "Genesis Framework",
-            "time": "2016-03-15 13:14:14"
+            "time": "2016-08-18 11:48:23"
+        },
+        {
+            "name": "wpackagist-plugin/akismet",
+            "version": "3.1.11",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/akismet/",
+                "reference": "tags/3.1.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.11.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/akismet/"
+        },
+        {
+            "name": "wpackagist-plugin/autoptimize",
+            "version": "2.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/autoptimize/",
+                "reference": "tags/2.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/autoptimize/"
+        },
+        {
+            "name": "wpackagist-plugin/black-studio-tinymce-widget",
+            "version": "2.2.11",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/black-studio-tinymce-widget/",
+                "reference": "tags/2.2.11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.11.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/black-studio-tinymce-widget/"
+        },
+        {
+            "name": "wpackagist-plugin/disable-emojis",
+            "version": "1.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-emojis/",
+                "reference": "tags/1.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-emojis.1.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-emojis/"
+        },
+        {
+            "name": "wpackagist-plugin/force-regenerate-thumbnails",
+            "version": "2.0.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/force-regenerate-thumbnails/",
+                "reference": "tags/2.0.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/force-regenerate-thumbnails/"
+        },
+        {
+            "name": "wpackagist-plugin/google-analytics-for-wordpress",
+            "version": "5.5.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
+                "reference": "tags/5.5.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "3.4.2",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/3.4.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.4.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "mustache/mustache",
+            "version": "v2.11.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/mustache.php.git",
+                "reference": "a3f6d55996dd28b58f3a909d474189a3c1aa693f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/a3f6d55996dd28b58f3a909d474189a3c1aa693f",
+                "reference": "a3f6d55996dd28b58f3a909d474189a3c1aa693f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~1.11",
+                "phpunit/phpunit": "~3.7|~4.0|~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Mustache": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Justin Hileman",
+                    "email": "justin@justinhileman.info",
+                    "homepage": "http://justinhileman.com"
+                }
+            ],
+            "description": "A Mustache implementation in PHP.",
+            "homepage": "https://github.com/bobthecow/mustache.php",
+            "keywords": [
+                "mustache",
+                "templating"
+            ],
+            "time": "2016-07-31 06:18:27"
+        },
+        {
+            "name": "rarst/laps",
+            "version": "1.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Rarst/laps.git",
+                "reference": "357753f84b297e2b3d5122d8aac795b91c6f9ac3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Rarst/laps/zipball/357753f84b297e2b3d5122d8aac795b91c6f9ac3",
+                "reference": "357753f84b297e2b3d5122d8aac795b91c6f9ac3",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "mustache/mustache": "~2.4",
+                "symfony/stopwatch": "~2.4"
+            },
+            "require-dev": {
+                "twbs/bootstrap": "~3.2"
+            },
+            "type": "wordpress-plugin",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Savchenko",
+                    "email": "contact@rarst.net",
+                    "homepage": "http://www.Rarst.net/"
+                }
+            ],
+            "description": "Light WordPress profiler.",
+            "homepage": "https://github.com/Rarst/laps",
+            "keywords": [
+                "performance",
+                "wordpress"
+            ],
+            "time": "2015-08-27 11:06:08"
+        },
+        {
+            "name": "symfony/stopwatch",
+            "version": "v2.8.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/stopwatch.git",
+                "reference": "35bae476693150728b0eb51647faac82faf9aaca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/35bae476693150728b0eb51647faac82faf9aaca",
+                "reference": "35bae476693150728b0eb51647faac82faf9aaca",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.8-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Stopwatch\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Stopwatch Component",
+            "homepage": "https://symfony.com",
+            "time": "2016-06-29 05:29:29"
         },
         {
             "name": "wp-sync-db/wp-sync-db",
@@ -252,290 +536,6 @@
             "time": "2016-03-07 16:34:12"
         },
         {
-            "name": "wpackagist-plugin/akismet",
-            "version": "3.1.10",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.1.10"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.10.zip",
-                "reference": "tags/3.1.10",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/akismet/"
-        },
-        {
-            "name": "wpackagist-plugin/autoptimize",
-            "version": "2.0.2",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/autoptimize/",
-                "reference": "tags/2.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.0.2.zip",
-                "reference": "tags/2.0.2",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/autoptimize/"
-        },
-        {
-            "name": "wpackagist-plugin/black-studio-tinymce-widget",
-            "version": "2.2.9",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/black-studio-tinymce-widget/",
-                "reference": "tags/2.2.9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.9.zip",
-                "reference": "tags/2.2.9",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/black-studio-tinymce-widget/"
-        },
-        {
-            "name": "wpackagist-plugin/disable-emojis",
-            "version": "1.5.1",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/disable-emojis/",
-                "reference": "tags/1.5.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-emojis.1.5.1.zip",
-                "reference": "tags/1.5.1",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/disable-emojis/"
-        },
-        {
-            "name": "wpackagist-plugin/force-regenerate-thumbnails",
-            "version": "2.0.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/force-regenerate-thumbnails/",
-                "reference": "tags/2.0.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.5.zip",
-                "reference": "tags/2.0.5",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/force-regenerate-thumbnails/"
-        },
-        {
-            "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.zip",
-                "reference": "tags/5.5",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/google-analytics-for-wordpress/"
-        },
-        {
-            "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.2.5",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.2.5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.2.5.zip",
-                "reference": "tags/3.2.5",
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "mustache/mustache",
-            "version": "v2.10.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/bobthecow/mustache.php.git",
-                "reference": "0bb2f76e2f34a8864a32be34c4ec66274d76c05e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/mustache.php/zipball/0bb2f76e2f34a8864a32be34c4ec66274d76c05e",
-                "reference": "0bb2f76e2f34a8864a32be34c4ec66274d76c05e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.4"
-            },
-            "require-dev": {
-                "fabpot/php-cs-fixer": "~1.6",
-                "phpunit/phpunit": "~3.7|~4.0|~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Mustache": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Justin Hileman",
-                    "email": "justin@justinhileman.info",
-                    "homepage": "http://justinhileman.com"
-                }
-            ],
-            "description": "A Mustache implementation in PHP.",
-            "homepage": "https://github.com/bobthecow/mustache.php",
-            "keywords": [
-                "mustache",
-                "templating"
-            ],
-            "time": "2016-02-27 19:22:46"
-        },
-        {
-            "name": "rarst/laps",
-            "version": "1.3.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Rarst/laps.git",
-                "reference": "357753f84b297e2b3d5122d8aac795b91c6f9ac3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Rarst/laps/zipball/357753f84b297e2b3d5122d8aac795b91c6f9ac3",
-                "reference": "357753f84b297e2b3d5122d8aac795b91c6f9ac3",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0",
-                "mustache/mustache": "~2.4",
-                "symfony/stopwatch": "~2.4"
-            },
-            "require-dev": {
-                "twbs/bootstrap": "~3.2"
-            },
-            "type": "wordpress-plugin",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Andrey Savchenko",
-                    "email": "contact@rarst.net",
-                    "homepage": "http://www.Rarst.net/"
-                }
-            ],
-            "description": "Light WordPress profiler.",
-            "homepage": "https://github.com/Rarst/laps",
-            "keywords": [
-                "performance",
-                "wordpress"
-            ],
-            "time": "2015-08-27 11:06:08"
-        },
-        {
-            "name": "symfony/stopwatch",
-            "version": "v2.8.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/stopwatch.git",
-                "reference": "9e24824b2a9a16e17ab997f61d70bc03948e434e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/stopwatch/zipball/9e24824b2a9a16e17ab997f61d70bc03948e434e",
-                "reference": "9e24824b2a9a16e17ab997f61d70bc03948e434e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.8-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Component\\Stopwatch\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Fabien Potencier",
-                    "email": "fabien@symfony.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony Stopwatch Component",
-            "homepage": "https://symfony.com",
-            "time": "2016-03-04 07:54:35"
-        },
-        {
             "name": "wpackagist-plugin/genesis-visual-hook-guide",
             "version": "0.9.5",
             "source": {
@@ -557,15 +557,15 @@
         },
         {
             "name": "wpackagist-plugin/redis-cache",
-            "version": "1.3.2",
+            "version": "1.3.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redis-cache/",
-                "reference": "tags/1.3.2"
+                "reference": "tags/1.3.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redis-cache.1.3.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.1.3.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -577,15 +577,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-importer",
-            "version": "0.6.2",
+            "version": "0.6.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-importer/",
-                "reference": "tags/0.6.2"
+                "reference": "tags/0.6.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.3.zip",
                 "reference": null,
                 "shasum": null
             },
