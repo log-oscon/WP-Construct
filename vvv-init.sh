@@ -29,20 +29,20 @@ noroot ./.scripts/build.sh
 
 if ! $(noroot wp core is-installed); then
 
-    echo " * Downloading WordPress"
+  echo " * Downloading WordPress"
 
-    noroot wp core download
+  noroot wp core download
 
-    echo " * Creating database schema ${DATABASE}"
+  echo " * Creating database schema ${DATABASE}"
 
-    mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS ${DATABASE}"
-    mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON ${DATABASE}.* TO wp@localhost IDENTIFIED BY 'wp';"
+  mysql -u root --password=root -e "CREATE DATABASE IF NOT EXISTS ${DATABASE}"
+  mysql -u root --password=root -e "GRANT ALL PRIVILEGES ON ${DATABASE}.* TO wp@localhost IDENTIFIED BY 'wp';"
 
-    echo " * Configuring WordPress"
+  echo " * Configuring WordPress"
 
-    WP_CACHE_KEY_SALT=`date +%s | sha256sum | head -c 64`
+  WP_CACHE_KEY_SALT=`date +%s | sha256sum | head -c 64`
 
-    noroot wp core config --dbname="${DATABASE}" --dbuser=wp --dbpass=wp --extra-php <<PHP
+  noroot wp core config --dbname="${DATABASE}" --dbuser=wp --dbpass=wp --extra-php <<PHP
 
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
@@ -57,29 +57,29 @@ define( 'WP_CACHE_KEY_SALT', '$WP_CACHE_KEY_SALT' );
 define( 'WP_ENV', 'development' );
 PHP
 
-    echo " * Setting up \"$TITLE\" at $URL"
+  echo " * Setting up \"$TITLE\" at $URL"
 
-    noroot wp core install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL"
+  noroot wp core install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL"
 
-    ## CREATE advanced-cache.php FILE ##
+  ## CREATE advanced-cache.php FILE ##
 
-    noroot touch wp-content/advanced-cache.php
+  noroot touch wp-content/advanced-cache.php
 
-    ## ACTIVATING COMPONENTS ##
+  ## ACTIVATING COMPONENTS ##
 
-    echo " * Activating the default theme"
+  echo " * Activating the default theme"
 
-    noroot wp theme activate ${THEME}
+  noroot wp theme activate ${THEME}
 
-    echo " * Activating plugins"
+  echo " * Activating plugins"
 
-    noroot wp plugin activate ${PLUGINS[*]}
+  noroot wp plugin activate ${PLUGINS[*]}
 
-    echo " * Importing test content"
+  echo " * Importing test content"
 
-    noroot curl -OLs https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
-    noroot wp import wptest.xml --authors=create
-    noroot rm wptest.xml
+  noroot curl -OLs https://raw.githubusercontent.com/manovotny/wptest/master/wptest.xml
+  noroot wp import wptest.xml --authors=create
+  noroot rm wptest.xml
 fi
 
 ## UPDATING COMPONENTS ##
