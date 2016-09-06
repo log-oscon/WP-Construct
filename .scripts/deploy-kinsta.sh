@@ -78,7 +78,7 @@
 
     echo -e "${YELLOW}Building the project for deployment...${RESET}"
 
-    bash .build.sh -l
+    bash .scripts/build.sh -l
 
     if [ 0 != $? ]; then
         echo -e "${RED}There was an error building the project.${RESET}"
@@ -105,6 +105,9 @@
     if [ 0 != $? ]; then
         # Create a new orphan branch to track deployments
         git checkout --orphan "deploy/${DEPLOY_ENV}"
+
+      # Everything is being tracked, so remove it
+      git rm --cached -r ./
     fi
 
     rsync -a --delete --exclude-from=.wpignore --exclude=.git --exclude=.gitignore "${BUILD_DIR}/" "${DIST_DIR}/"
