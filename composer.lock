@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0fbec5cb12f41e4a5bcef8d2aa318ce9",
-    "content-hash": "01bd2cc58e4c18aa93d595fd439e1584",
+    "hash": "043ce42efd791b189f4292243ee7fe9f",
+    "content-hash": "2f7664c5a97c00a9210746a3fdb3d094",
     "packages": [
         {
             "name": "composer/installers",
@@ -188,70 +188,6 @@
             "time": "2016-08-18 11:48:23"
         },
         {
-            "name": "wp-sync-db/wp-sync-db",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wp-sync-db/wp-sync-db.git",
-                "reference": "8f18390a83374089acfac202491e78d4938616fd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wp-sync-db/wp-sync-db/zipball/8f18390a83374089acfac202491e78d4938616fd",
-                "reference": "8f18390a83374089acfac202491e78d4938616fd",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0.6"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "WP Sync DB eliminates the manual work of migrating a WP database.",
-            "homepage": "https://github.com/wp-sync-db/wp-sync-db",
-            "keywords": [
-                "db",
-                "plugin",
-                "wordpress",
-                "wp-sync-db"
-            ],
-            "time": "2016-04-24 08:56:12"
-        },
-        {
-            "name": "wp-sync-db/wp-sync-db-media-files",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/wp-sync-db/wp-sync-db-media-files.git",
-                "reference": "cebf64eb528532d627284353278b284bb12e7ef1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/wp-sync-db/wp-sync-db-media-files/zipball/cebf64eb528532d627284353278b284bb12e7ef1",
-                "reference": "cebf64eb528532d627284353278b284bb12e7ef1",
-                "shasum": ""
-            },
-            "require": {
-                "composer/installers": "~1.0.6"
-            },
-            "type": "wordpress-plugin",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0"
-            ],
-            "description": "WP Sync DB Media File Addon for WP Sync DB",
-            "homepage": "https://github.com/wp-sync-db/wp-sync-db-media-files",
-            "keywords": [
-                "media",
-                "plugin",
-                "wordpress",
-                "wp-sync-db"
-            ],
-            "time": "2016-03-07 16:34:12"
-        },
-        {
             "name": "wpackagist-plugin/akismet",
             "version": "3.1.11",
             "source": {
@@ -273,15 +209,15 @@
         },
         {
             "name": "wpackagist-plugin/autoptimize",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/autoptimize/",
-                "reference": "tags/2.0.2"
+                "reference": "tags/2.1.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.0.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/autoptimize.2.1.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -333,15 +269,15 @@
         },
         {
             "name": "wpackagist-plugin/force-regenerate-thumbnails",
-            "version": "2.0.5",
+            "version": "2.0.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/force-regenerate-thumbnails/",
-                "reference": "tags/2.0.5"
+                "reference": "tags/2.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.5.zip",
+                "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.6.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -488,7 +424,7 @@
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.8.9",
+            "version": "v2.8.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -534,6 +470,70 @@
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
             "time": "2016-06-29 05:29:29"
+        },
+        {
+            "name": "wp-sync-db/wp-sync-db",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-sync-db/wp-sync-db.git",
+                "reference": "8f18390a83374089acfac202491e78d4938616fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-sync-db/wp-sync-db/zipball/8f18390a83374089acfac202491e78d4938616fd",
+                "reference": "8f18390a83374089acfac202491e78d4938616fd",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0.6"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "WP Sync DB eliminates the manual work of migrating a WP database.",
+            "homepage": "https://github.com/wp-sync-db/wp-sync-db",
+            "keywords": [
+                "db",
+                "plugin",
+                "wordpress",
+                "wp-sync-db"
+            ],
+            "time": "2016-04-24 08:56:12"
+        },
+        {
+            "name": "wp-sync-db/wp-sync-db-media-files",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-sync-db/wp-sync-db-media-files.git",
+                "reference": "cebf64eb528532d627284353278b284bb12e7ef1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-sync-db/wp-sync-db-media-files/zipball/cebf64eb528532d627284353278b284bb12e7ef1",
+                "reference": "cebf64eb528532d627284353278b284bb12e7ef1",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0.6"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "WP Sync DB Media File Addon for WP Sync DB",
+            "homepage": "https://github.com/wp-sync-db/wp-sync-db-media-files",
+            "keywords": [
+                "media",
+                "plugin",
+                "wordpress",
+                "wp-sync-db"
+            ],
+            "time": "2016-03-07 16:34:12"
         },
         {
             "name": "wpackagist-plugin/genesis-visual-hook-guide",
