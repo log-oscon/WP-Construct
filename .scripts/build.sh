@@ -15,10 +15,10 @@ NC='\e[0m' # No Color
 # SETUP AND SANITY CHECKS
 # =======================
 while getopts l OPTION 2>/dev/null; do
-    case $OPTION
-    in
-        l) LIVE=1;;
-    esac
+  case $OPTION
+  in
+    l) LIVE=1;;
+  esac
 done
 
 if [ $LIVE -eq 1 ]; then

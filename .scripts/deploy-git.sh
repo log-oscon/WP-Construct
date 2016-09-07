@@ -54,12 +54,12 @@
 
   echo -e "Checking you have a Git user setup..."
   if [[ $(git config --list) != *user.email* || $(git config --list) != *user.name* ]]; then
-      git config --global user.name "Pedro Duarte"
-      git config --global user.email "xipasduarte@gmail.com"
+    git config --global user.name "Pedro Duarte"
+    git config --global user.email "xipasduarte@gmail.com"
   fi
 
   if [ -z "$ENVIRONMENT" ]; then
-      $ENVIRONMENT = $(git symbolic-ref --short HEAD)
+    $ENVIRONMENT = $(git symbolic-ref --short HEAD)
   fi
 
   # Get around Codeship's shallow clones:
@@ -72,8 +72,8 @@
 
   git clone --recursive "$ROOT_DIR" "$BUILD_DIR"
   if [ 0 != $? ]; then
-      echo -e "${RED}There was an error cloning the repository.${RESET}"
-      exit 3
+    echo -e "${RED}There was an error cloning the repository.${RESET}"
+    exit 3
   fi
 
   cd "$BUILD_DIR"
@@ -83,8 +83,8 @@
   bash ./.scripts/build.sh -l
 
   if [ 0 != $? ]; then
-      echo -e "${RED}There was an error building the project.${RESET}"
-      exit 4
+    echo -e "${RED}There was an error building the project.${RESET}"
+    exit 4
   fi
 
   # DEPLOY THE PROJECT
@@ -94,8 +94,8 @@
 
   git clone --recursive "$DEPLOY_REPO" "$DIST_DIR"
   if [ 0 != $? ]; then
-      echo -e "${RED}There was an error cloning the repository.${RESET}"
-      exit 5
+    echo -e "${RED}There was an error cloning the repository.${RESET}"
+    exit 5
   fi
 
   cd "$DIST_DIR"
@@ -105,11 +105,11 @@
   # Attempt to switch to the deployment branch
   git checkout "deploy/${ENVIRONMENT}"
   if [ 0 != $? ]; then
-      # Create a new orphan branch to track deployments
-      git checkout --orphan "deploy/${ENVIRONMENT}"
+    # Create a new orphan branch to track deployments
+    git checkout --orphan "deploy/${ENVIRONMENT}"
 
-      # Everything is being tracked, so remove it
-      git rm --cached -r ./
+    # Everything is being tracked, so remove it
+    git rm --cached -r ./
   fi
 
   rsync -a --delete --exclude-from=.wpignore --exclude=.git --exclude=.gitignore "${BUILD_DIR}/" "${DIST_DIR}/"

@@ -1,5 +1,6 @@
 <?php
 /**
+ * @wordpress-plugin
  * Plugin Name: HTTPS
  * Description: Fixes and improves HTTPS support.
  * Version:     2.0.0
