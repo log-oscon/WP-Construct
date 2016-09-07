@@ -19,7 +19,11 @@ noroot() {
 
 ## PROVISIONING ##
 
-echo "Setting up a local ${TITLE} project for development..."
+echo "-----------------------------"
+echo "${TITLE}"
+echo "-----------------------------"
+
+echo "Building project dependencies..."
 
 sudo apt-get -y install graphicsmagick redis-server php5-redis
 sudo service php5-fpm restart
