@@ -17,5 +17,8 @@
     "jquery": "global:jQuery"
   },
   "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {},
+  "scripts": {
+    "build": "gulp build"
+  }
 }
