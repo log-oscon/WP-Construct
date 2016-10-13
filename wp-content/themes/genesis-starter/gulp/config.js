@@ -1,11 +1,12 @@
 import hasFlag from 'has-flag';
 import findupNodeModules from 'findup-node-modules';
 
-const host  = 'local.wordpress.dev';
-const src   = './src';
-const dest  = './public';
-const test  = './test';
-const debug = hasFlag('debug');
+const host      = 'local.wordpress.dev';
+const src       = './src';
+const dest      = './public';
+const test      = './test';
+const languages = './languages';
+const debug     = hasFlag('debug');
 
 export default {
   src,
@@ -32,6 +33,27 @@ export default {
     src: src + '/fonts/**/*.{ttf,woff,woff2}',
     out: 'fonts.css',
     dest,
+  },
+  i18n: {
+    src: [
+      './*.php',
+      '**/*.php',
+      '!languages/',
+      '!gulp/',
+      '!src/',
+      '!test/',
+      '!public/',
+      '!vendor/',
+      '!node_modules',
+      'build/',
+      'svn/'
+    ],
+    dest: languages,
+    author: 'log <engenharia@log.pt>',
+    support: 'http://log.pt',
+    pluginSlug: 'genesis-starter',
+    textDomain: 'genesis-starter',
+    potFilename: 'genesis-starter'
   },
   images: {
     src: [
