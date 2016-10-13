@@ -47,6 +47,7 @@ The Genesis starter provides the following Gulp tasks.
 | `browser-sync` | Reloads and syncs browsers on multiple devices.          |
 | `browserify`   | Packages JavaScript bundles from their sources.          |
 | `eslint`       | Lints your JavaScript code.                              |
+| `i18n`         | Generates a .POT file.                                   |
 | `images`       | Copies and compresses image assets.                      |
 | `phpunit`      | Runs PHPUnit test cases.                                 |
 | `sass`         | Compiles, minifies and concatenates CSS from Sass.       |
