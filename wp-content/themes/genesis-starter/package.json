@@ -5,10 +5,11 @@
   "repository": {},
   "browserify": {
     "transform": [
+      "envify",
       "babelify",
+      "browserify-shim",
       "aliasify",
-      "browserify-data",
-      "browserify-shim"
+      "browserify-data"
     ]
   },
   "aliasify": {
