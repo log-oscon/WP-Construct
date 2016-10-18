@@ -54,8 +54,8 @@
 
   echo -e "Checking you have a Git user setup..."
   if [[ $(git config --list) != *user.email* || $(git config --list) != *user.name* ]]; then
-    git config --global user.name "Pedro Duarte"
-    git config --global user.email "xipasduarte@gmail.com"
+    git config --global user.name "log.OSCON"
+    git config --global user.email "engenharia@log.pt"
   fi
 
   if [ -z "$ENVIRONMENT" ]; then
