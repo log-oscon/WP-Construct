@@ -1,5 +1,8 @@
 {
+  "description": "Genesis Child Theme",
+  "license": "UNLICENSED",
   "browser": {},
+  "repository": {},
   "browserify": {
     "transform": [
       "babelify",
