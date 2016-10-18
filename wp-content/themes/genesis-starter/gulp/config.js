@@ -36,7 +36,6 @@ export default {
   },
   i18n: {
     src: [
-      './*.php',
       '**/*.php',
       '!languages/',
       '!gulp/',
