@@ -12,7 +12,7 @@
 #
 # - destination, -d: current repository [default]
 #   The git repository that is to be used as the destination for the commit of the
-#   deloy branch.
+#   deploy branch.
 
 # TODO: Handle Git submodules
 
