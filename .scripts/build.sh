@@ -33,6 +33,6 @@ npm install
 
 echo -e "${GREEN}Building theme…${NC}"
 cd "$ROOT/wp-content/themes/genesis-starter"
-npm install
 composer install --no-interaction $OPT_COMPOSER
+npm install
 npm run build
