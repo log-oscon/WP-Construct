@@ -26,6 +26,14 @@ Thumbs.db
 # Dependencies
 node_modules/
 
+# This file is PHP 5.6 and fails syntax checks on WP Engine:
+vendor/composer/autoload_static.php
+
+# Development
+/.scripts
+README.md
+vvv-*
+
 # Builds
 /.deploy_*/
 /tmp
