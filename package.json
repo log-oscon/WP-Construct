@@ -2,6 +2,7 @@
   "name": "wp-genesis-boilerplate",
   "version": "1.0.0",
   "description": "WordPress and Genesis Framework boilerplate project.",
+  "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
     "url": "git@github.com:log-oscon/wp-genesis-boilerplate.git"
