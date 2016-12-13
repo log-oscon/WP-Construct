@@ -31,6 +31,9 @@ vendor/composer/autoload_static.php
 
 # Development
 /.scripts
+.editorconfig
+.jscsrc
+.phpcs.xml
 README.md
 vvv-*
 
