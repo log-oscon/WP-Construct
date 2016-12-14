@@ -20,6 +20,7 @@
     "wpackagist-plugin/autoptimize": "~2.0",
     "wpackagist-plugin/black-studio-tinymce-widget": "~2.2",
     "wpackagist-plugin/disable-emojis": "~1.5",
+    "wpackagist-plugin/disable-xml-rpc": "~1.0",
     "wpackagist-plugin/force-regenerate-thumbnails": "~2.0",
     "wpackagist-plugin/google-analytics-for-wordpress": "~5.5",
     "wpackagist-plugin/wordpress-seo": "^4.0"
@@ -37,6 +38,10 @@
     "installer-paths": {
       "vendor/{$vendor}/{$name}/": [
         "goblindegook/syllables"
+      ],
+      "wp-content/mu-plugins/{$name}/": [
+        "wpackagist-plugin/disable-emojis",
+        "wpackagist-plugin/disable-xml-rpc"
       ]
     }
   },

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "28c613570589c8e4d0b59f93b02bf2d9",
-    "content-hash": "6286f43f29116d62b78b18aed42ba1da",
+    "hash": "45ca9f7556e5bf03cbb802668107c555",
+    "content-hash": "91b5ae3aa55263cd4ff75fd0fa0dd231",
     "packages": [
         {
             "name": "composer/installers",
@@ -228,7 +228,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/disable-emojis.1.5.2.zip",
-                "reference": "tags/1.5.2",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -236,6 +236,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/disable-emojis/"
+        },
+        {
+            "name": "wpackagist-plugin/disable-xml-rpc",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-xml-rpc/",
+                "reference": "tags/1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-xml-rpc.1.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-xml-rpc/"
         },
         {
             "name": "wpackagist-plugin/force-regenerate-thumbnails",
