@@ -11,24 +11,18 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
-    },
-    {
-      "type": "composer",
-      "url": "https://composer.log.pt"
     }
   ],
   "require": {
+    "composer-plugin-api": "^1.1",
     "goblindegook/syllables": "~0.3",
-    "premium-wp-plugin/advanced-custom-fields-pro": "^5.4",
-    "premium-wp-theme/genesis": "~2.3",
     "wpackagist-plugin/akismet": "~3.1",
     "wpackagist-plugin/autoptimize": "~2.0",
     "wpackagist-plugin/black-studio-tinymce-widget": "~2.2",
     "wpackagist-plugin/disable-emojis": "~1.5",
     "wpackagist-plugin/force-regenerate-thumbnails": "~2.0",
     "wpackagist-plugin/google-analytics-for-wordpress": "~5.5",
-    "wpackagist-plugin/wordpress-seo": "~3.4",
-    "composer-plugin-api": "^1.1"
+    "wpackagist-plugin/wordpress-seo": "^4.0"
   },
   "require-dev": {
     "rarst/laps": "~1.2",
@@ -45,5 +39,8 @@
         "goblindegook/syllables"
       ]
     }
+  },
+  "config": {
+    "sort-packages": true
   }
 }
