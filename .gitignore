@@ -10,6 +10,8 @@ node_modules/
 /_deploy_*/
 
 # plugins
+/wp-content/mu-plugins/disable-emojis
+/wp-content/mu-plugins/disable-xml-rpc
 /wp-content/mu-plugins/wp-performance-profiler
 /wp-content/mu-plugins/load-wp-performance-profiler.php
 /wp-content/plugins/*

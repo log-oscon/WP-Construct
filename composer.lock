@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "043ce42efd791b189f4292243ee7fe9f",
-    "content-hash": "2f7664c5a97c00a9210746a3fdb3d094",
+    "hash": "45ca9f7556e5bf03cbb802668107c555",
+    "content-hash": "91b5ae3aa55263cd4ff75fd0fa0dd231",
     "packages": [
         {
             "name": "composer/installers",
@@ -158,46 +158,16 @@
             "time": "2015-07-18 19:21:59"
         },
         {
-            "name": "premium-wp-plugin/advanced-custom-fields-pro",
-            "version": "5.4.2",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:log-oscon/wp-plugin-advanced-custom-fields-pro.git",
-                "reference": "4e3eb85468114708f1f83e88fe14b98a4ea3155c"
-            },
-            "type": "wordpress-plugin",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Advanced Custom Fields Pro",
-            "time": "2016-08-18 11:40:06"
-        },
-        {
-            "name": "premium-wp-theme/genesis",
-            "version": "2.3.1",
-            "source": {
-                "type": "git",
-                "url": "git@bitbucket.org:log-oscon/wp-theme-genesis.git",
-                "reference": "81fb5a283c42b6b99f1e94594bf17c9d73d91614"
-            },
-            "type": "wordpress-theme",
-            "license": [
-                "GPL 2.0+"
-            ],
-            "description": "Genesis Framework",
-            "time": "2016-08-18 11:48:23"
-        },
-        {
             "name": "wpackagist-plugin/akismet",
-            "version": "3.1.11",
+            "version": "3.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/akismet/",
-                "reference": "tags/3.1.11"
+                "reference": "tags/3.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/akismet.3.1.11.zip",
+                "url": "https://downloads.wordpress.org/plugin/akismet.3.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -218,7 +188,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/autoptimize.2.1.0.zip",
-                "reference": null,
+                "reference": "tags/2.1.0",
                 "shasum": null
             },
             "require": {
@@ -229,15 +199,15 @@
         },
         {
             "name": "wpackagist-plugin/black-studio-tinymce-widget",
-            "version": "2.2.11",
+            "version": "2.3.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/black-studio-tinymce-widget/",
-                "reference": "tags/2.2.11"
+                "reference": "tags/2.3.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.2.11.zip",
+                "url": "https://downloads.wordpress.org/plugin/black-studio-tinymce-widget.2.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -268,6 +238,26 @@
             "homepage": "https://wordpress.org/plugins/disable-emojis/"
         },
         {
+            "name": "wpackagist-plugin/disable-xml-rpc",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/disable-xml-rpc/",
+                "reference": "tags/1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-xml-rpc.1.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/disable-xml-rpc/"
+        },
+        {
             "name": "wpackagist-plugin/force-regenerate-thumbnails",
             "version": "2.0.6",
             "source": {
@@ -278,7 +268,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.6.zip",
-                "reference": null,
+                "reference": "tags/2.0.6",
                 "shasum": null
             },
             "require": {
@@ -289,15 +279,15 @@
         },
         {
             "name": "wpackagist-plugin/google-analytics-for-wordpress",
-            "version": "5.5.2",
+            "version": "5.5.4",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-analytics-for-wordpress/",
-                "reference": "tags/5.5.2"
+                "reference": "tags/5.5.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/google-analytics-for-wordpress.5.5.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -309,15 +299,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "3.4.2",
+            "version": "4.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/3.4.2"
+                "reference": "tags/4.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.3.4.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.0.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -377,16 +367,16 @@
         },
         {
             "name": "rarst/laps",
-            "version": "1.3.2",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Rarst/laps.git",
-                "reference": "357753f84b297e2b3d5122d8aac795b91c6f9ac3"
+                "reference": "bca3f42ee567c322c143e67e172265fecc394e74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Rarst/laps/zipball/357753f84b297e2b3d5122d8aac795b91c6f9ac3",
-                "reference": "357753f84b297e2b3d5122d8aac795b91c6f9ac3",
+                "url": "https://api.github.com/repos/Rarst/laps/zipball/bca3f42ee567c322c143e67e172265fecc394e74",
+                "reference": "bca3f42ee567c322c143e67e172265fecc394e74",
                 "shasum": ""
             },
             "require": {
@@ -420,11 +410,11 @@
                 "performance",
                 "wordpress"
             ],
-            "time": "2015-08-27 11:06:08"
+            "time": "2016-12-02 17:18:58"
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v2.8.10",
+            "version": "v2.8.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -546,7 +536,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/genesis-visual-hook-guide.zip",
-                "reference": null,
+                "reference": "trunk",
                 "shasum": null
             },
             "require": {
@@ -557,15 +547,15 @@
         },
         {
             "name": "wpackagist-plugin/redis-cache",
-            "version": "1.3.3",
+            "version": "1.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redis-cache/",
-                "reference": "tags/1.3.3"
+                "reference": "tags/1.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redis-cache.1.3.3.zip",
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.1.3.5.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -586,7 +576,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.3.zip",
-                "reference": null,
+                "reference": "tags/0.6.3",
                 "shasum": null
             },
             "require": {
@@ -606,7 +596,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-hydra.1.1.zip",
-                "reference": null,
+                "reference": "tags/1.1",
                 "shasum": null
             },
             "require": {
