@@ -1,30 +1,30 @@
 .screen-reader-text,
 .screen-reader-text span,
 .screen-reader-shortcut {
-  position: absolute !important;
+  border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
-  width: 1px;
-  border: 0;
   overflow: hidden;
+  position: absolute !important;
+  width: 1px;
 }
 
 .screen-reader-text:focus,
 .screen-reader-shortcut:focus,
-.genesis-nav-menu .search input[type="submit"]:focus,
-.widget_search input[type="submit"]:focus  {
+.widget_search input[type="submit"]:focus,
+.genesis-nav-menu .search input[type="submit"]:focus {
+  background: white;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
   clip: auto !important;
-  height: auto;
-  width: auto;
+  color: #333;
   display: block;
   font-size: 1em;
-  font-weight: bold;
+  font-weight: 600;
+  height: auto;
   padding: 15px 23px 14px;
-  color: #333;
-  background: #fff;
-  z-index: 100000; // above WP toolbar
   text-decoration: none;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.6);
+  width: auto;
+  z-index: 100000; // above WP toolbar
 }
 
 .more-link {
@@ -33,32 +33,32 @@
 
 // Menu accessibility
 
-.menu .menu-item {
+.menu-item {
   &:focus {
     position: static;
   }
 
-  & > a:focus + ul.sub-menu,
-  &.sfHover > ul.sub-menu {
-   left: auto;
-   opacity: 1;
+  &.sfHover > ul.sub-menu,
+  > a:focus + ul.sub-menu {
+    left: auto;
+    opacity: 1;
   }
 }
 
 // Skip links
 
 .genesis-skip-link {
- margin: 0;
+  margin: 0;
 }
 
 .genesis-skip-link li {
- height: 0;
- width: 0;
- list-style: none;
+  height: 0;
+  list-style: none;
+  width: 0;
 }
 
 /* Display outline on focus */
 :focus {
- color: #333;
- outline: #ccc solid 1px;
+  color: #333;
+  outline: #ccc solid 1px;
 }

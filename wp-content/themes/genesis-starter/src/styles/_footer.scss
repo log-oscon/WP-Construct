@@ -41,7 +41,6 @@
 
   @include susy-breakpoint($breakpoint-l) {
     @include span(4 of 12);
-    
   }
 }
 

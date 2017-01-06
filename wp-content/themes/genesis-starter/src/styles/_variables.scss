@@ -11,20 +11,20 @@ $breakpoint-m:  800px;
 $font-family:                   Lato, sans-serif;
 $font-size:                     18px;
 $font-weight:                   300;
-$line-height:                   1.625;
+$line-height:                   1.63;
 
 $font-family-alt:               Lato, sans-serif;
 $font-size-alt:                 36px;
 $font-weight-alt:               400;
 $line-height-alt:               1.2;
 
-$color-background:              #fff;
+$color-background:              white;
 $color-highlight:               #c3251d;
 $color-text:                    #333;
 
 $color-background-alt:          #333;
 $color-highlight-alt:           #333;
-$color-text-alt:                #fff;
+$color-text-alt:                white;
 
 $border:                        1px solid #ddd;
 $border-alt:                    1px solid #999;
@@ -49,10 +49,10 @@ $link-active-color:             $color-highlight-alt;
 $link-color:                    $color-highlight;
 $link-decoration:               underline;
 
-$input-active-background-color: #fff;
+$input-active-background-color: white;
 $input-active-text-color:       $color-highlight-alt;
 $input-active-border:           $border-alt;
-$input-background-color:        #fff;
+$input-background-color:        white;
 $input-placeholder-text-color:  $color-text;
 $input-text-color:              $color-text;
 $input-text-font-size:          18px;

@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "45ca9f7556e5bf03cbb802668107c555",
     "content-hash": "91b5ae3aa55263cd4ff75fd0fa0dd231",
     "packages": [
         {
@@ -105,7 +104,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2016-04-13T19:46:30+00:00"
         },
         {
             "name": "goblindegook/syllables",
@@ -155,7 +154,7 @@
                 "toolkit",
                 "wordpress"
             ],
-            "time": "2015-07-18 19:21:59"
+            "time": "2015-07-18T19:21:59+00:00"
         },
         {
             "name": "wpackagist-plugin/akismet",
@@ -188,7 +187,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/autoptimize.2.1.0.zip",
-                "reference": "tags/2.1.0",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -219,15 +218,15 @@
         },
         {
             "name": "wpackagist-plugin/disable-emojis",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/disable-emojis/",
-                "reference": "tags/1.5.2"
+                "reference": "tags/1.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/disable-emojis.1.5.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/disable-emojis.1.5.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -268,7 +267,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/force-regenerate-thumbnails.2.0.6.zip",
-                "reference": "tags/2.0.6",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -299,15 +298,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "4.0",
+            "version": "4.0.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/4.0"
+                "reference": "tags/4.0.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.0.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.4.0.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -363,7 +362,7 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2016-07-31 06:18:27"
+            "time": "2016-07-31T06:18:27+00:00"
         },
         {
             "name": "rarst/laps",
@@ -410,7 +409,7 @@
                 "performance",
                 "wordpress"
             ],
-            "time": "2016-12-02 17:18:58"
+            "time": "2016-12-02T17:18:58+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -459,7 +458,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2016-06-29 05:29:29"
+            "time": "2016-06-29T05:29:29+00:00"
         },
         {
             "name": "wp-sync-db/wp-sync-db",
@@ -491,7 +490,7 @@
                 "wordpress",
                 "wp-sync-db"
             ],
-            "time": "2016-04-24 08:56:12"
+            "time": "2016-04-24T08:56:12+00:00"
         },
         {
             "name": "wp-sync-db/wp-sync-db-media-files",
@@ -523,7 +522,7 @@
                 "wordpress",
                 "wp-sync-db"
             ],
-            "time": "2016-03-07 16:34:12"
+            "time": "2016-03-07T16:34:12+00:00"
         },
         {
             "name": "wpackagist-plugin/genesis-visual-hook-guide",
@@ -536,7 +535,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/genesis-visual-hook-guide.zip",
-                "reference": "trunk",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -576,7 +575,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wordpress-importer.0.6.3.zip",
-                "reference": "tags/0.6.3",
+                "reference": null,
                 "shasum": null
             },
             "require": {
@@ -596,7 +595,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/plugin/wp-hydra.1.1.zip",
-                "reference": "tags/1.1",
+                "reference": null,
                 "shasum": null
             },
             "require": {

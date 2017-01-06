@@ -53,7 +53,7 @@
 }
 
 .entry-footer .entry-meta {
-  border-top: 2px solid #f5f5f5;
+  border-top: 2px solid whitesmoke;
   padding-top: 24px;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .entry-comments-link::before {
-  content: '\2014';
+  content: "\2014";
   margin: 0 6px 0 2px;
 }
 
@@ -138,7 +138,7 @@
 
 .comment {
   background-color: $body-background-color;
-  border: 2px solid #fff;
+  border: 2px solid white;
   border-right: 0;
 }
 
@@ -180,7 +180,7 @@
 }
 
 .form-allowed-tags {
-  background-color: #f5f5f5;
+  background-color: whitesmoke;
   font-size: 16px;
   padding: 24px;
 }

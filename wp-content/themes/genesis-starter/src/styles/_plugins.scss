@@ -19,7 +19,7 @@
 @include susy-breakpoint($breakpoint-m) {
   .enews-widget,
   .enews-widget .widget-title {
-    color: #fff;
+    color: white;
   }
 
   .sidebar .widget.enews-widget {
@@ -34,10 +34,10 @@
 
   .enews-widget [type="submit"] {
     background-color: #e5554e;
-    color: #fff;
+    color: white;
 
     &:hover {
-      background-color: #fff;
+      background-color: white;
       color: #333;
     }
   }

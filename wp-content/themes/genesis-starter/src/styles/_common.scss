@@ -63,8 +63,8 @@
   width: 50%;
 }
 
-.genesis-nav-menu .search [type="submit"],
-.widget_search [type="submit"] {
+.widget_search [type="submit"],
+.genesis-nav-menu .search [type="submit"] {
   border: 0;
   clip: rect(0, 0, 0, 0);
   height: 1px;
@@ -82,7 +82,7 @@
 
 .entry-title {
   font-size: 36px;
-  
+
   a {
     color: $link-active-color;
 
@@ -106,6 +106,18 @@
 }
 
 // WordPress
+
+a,
+img,
+.wp-caption {
+  &.alignleft {
+    margin: 0 24px 24px 0;
+  }
+
+  &.alignright {
+    margin: 0 0 24px 24px;
+  }
+}
 
 .alignnone {
   display: inline-block;
@@ -141,18 +153,6 @@ a {
 
   &.alignnone {
     margin-bottom: 12px;
-  }
-}
-
-a,
-img,
-.wp-caption {
-  &.alignleft {
-    margin: 0 24px 24px 0;
-  }
-
-  &.alignright {
-    margin: 0 0 24px 24px;
   }
 }
 
