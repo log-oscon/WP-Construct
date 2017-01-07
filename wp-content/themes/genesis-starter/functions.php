@@ -13,18 +13,27 @@ define( 'CHILD_THEME_URL', 'https://github.com/log-oscon/wp-genesis-boilerplate'
 define( 'CHILD_THEME_VERSION', '1.0.0' );
 
 //* Set Localization (do not remove)
-\load_child_theme_textdomain( 'genesis-starter',
-	\apply_filters( 'child_theme_textdomain', \get_stylesheet_directory() . '/languages', 'genesis-starter' ) );
+\load_child_theme_textdomain( 'genesis-starter', \apply_filters(
+	'child_theme_textdomain',
+	\get_stylesheet_directory() . '/languages',
+	'genesis-starter'
+) );
 
 //* Add HTML5 markup structure
 \add_theme_support( 'html5', array(
-	'search-form', 'comment-form', 'comment-list'
+	'search-form',
+	'comment-form',
+	'comment-list',
 ) );
 
 //* Add support for accessibility features
-\add_theme_support( 'genesis-accessibility',
-  array( 'headings', 'drop-down-menu', 'search-form', 'skip-links', 'rems' )
-);
+\add_theme_support( 'genesis-accessibility', array(
+	'headings',
+	'drop-down-menu',
+	'search-form',
+	'skip-links',
+	'rems',
+) );
 
 //* Add viewport meta tag for mobile browsers
 \add_theme_support( 'genesis-responsive-viewport' );

@@ -9,16 +9,16 @@ class Shortcodes {
 
 	/**
 	 * Setup shortcode hooks.
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
-	public function ready () {
+	public function ready() {
 		$this->replace_shortcode( 'gallery', array( $this, 'gallery_shortcode' ) );
 	}
 
 	/**
 	 * Wraps the gallery shortcode and removes breaks from the output.
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function gallery_shortcode( $attr ) {
@@ -28,7 +28,7 @@ class Shortcodes {
 
 	/**
 	 * Replaces the current shortcode function with the provided callback.
-	 * 
+	 *
 	 * @since  1.0.0
 	 * @access private
 	 * @param  string   $tag      Shortcode tag.

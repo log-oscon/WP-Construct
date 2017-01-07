@@ -34,7 +34,6 @@ require_once ABSPATH . 'wp-admin/includes/plugin.php';
 	foreach ( get_mu_plugins( $cache_key ) as $plugin ) {
 		include_once WPMU_PLUGIN_DIR . '/' . $plugin;
 	}
-
 } );
 
 /**
