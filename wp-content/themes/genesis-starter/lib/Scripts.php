@@ -6,7 +6,7 @@ class Scripts {
 
 	/**
 	 * Base URL for public assets.
-	 * 
+	 *
 	 * @since 1.0.0
 	 * @var   string
 	 */
@@ -14,7 +14,7 @@ class Scripts {
 
 	/**
 	 * List of CSS assets to cache in localStorage.
-	 * 
+	 *
 	 * @since 1.0.0
 	 * @var   array
 	 */
@@ -22,7 +22,7 @@ class Scripts {
 
 	/**
 	 * Constructor.
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function __construct() {
@@ -35,7 +35,7 @@ class Scripts {
 
 	/**
 	 * Setup hooks.
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function ready() {
@@ -48,7 +48,7 @@ class Scripts {
 	 * Enqueue scripts.
 	 *
 	 * Fired on `wp_enqueue_scripts`.
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function enqueue() {
@@ -57,29 +57,32 @@ class Scripts {
 		\wp_enqueue_script( 'genesis-starter-head',
 			$this->base_uri . 'head.js',
 			array(),
-			CHILD_THEME_VERSION, false );
+			CHILD_THEME_VERSION, false
+		);
 
 		\wp_enqueue_script( 'genesis-starter-infrastructure',
 			$this->base_uri . 'infrastructure.js',
 			array( 'jquery' ),
-			CHILD_THEME_VERSION, true );
+			CHILD_THEME_VERSION, true
+		);
 
 		\wp_enqueue_script( 'genesis-starter-app',
 			$this->base_uri . 'app.js',
 			array( 'genesis-starter-infrastructure' ),
-			CHILD_THEME_VERSION, true );
+			CHILD_THEME_VERSION, true
+		);
 	}
 
 	/**
 	 * Include deferred font loading script in the header.
-	 * 
+	 *
 	 * @since 1.0.0
 	 */
 	public function inline() {
 		?>
 		<!--noptimize-->
 		<script type="text/javascript">
-			var cachedStyles = <?php echo json_encode( $this->cached_styles ); ?>;
+			var cachedStyles = <?php echo \wp_json_encode( $this->cached_styles ); ?>;
 			<?php include dirname( __DIR__ ) . '/public/inline.js'; ?>
 		</script>
 		<noscript>
@@ -113,7 +116,7 @@ class Scripts {
 		);
 
 		// Do not load certain scripts asynchronously:
-		if ( in_array( $handle, $blacklist ) ) {
+		if ( in_array( $handle, $blacklist, true ) ) {
 			return $tag;
 		}
 

@@ -46,9 +46,9 @@ function secure_oembed_result( $data, $url, $args ) {
  * @param mixed  $cache   The cached HTML result, stored in post meta.
  * @param string $url     The attempted embed URL.
  * @param array  $attr    An array of shortcode attributes.
- * @param int    $post_ID Post ID.
+ * @param int    $post_id Post ID.
  */
-function secure_embed_oembed_html( $cache, $url, $attr, $post_ID ) {
+function secure_embed_oembed_html( $cache, $url, $attr, $post_id ) {
 	return \is_ssl() ? preg_replace( '/http:\/\//', 'https://', $cache ) : $cache;
 }
 
