@@ -1,6 +1,6 @@
 # Genesis Starter
 
-A Genesis Framework starter theme with Gulp support.  I took StudioPress' original Genesis Sampler theme and added my stuff.
+A Genesis Framework starter theme with Gulp support. I took StudioPress' original Genesis Sampler theme and added my stuff.
 
 ## Requirements
 
@@ -11,7 +11,7 @@ A Genesis Framework starter theme with Gulp support.  I took StudioPress' origin
 * [Gulp](http://gulpjs.com/)
 * [Browserify](http://browserify.org/)
 * [Sass](http://sass-lang.com/)
-* [scss-lint](https://github.com/causes/scss-lint)
+* [stylelint](https://github.com/stylelint/stylelint)
 * [GraphicsMagick](http://www.graphicsmagick.org/) (for `gulp-unretina`)
 
 ## Setup
