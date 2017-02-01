@@ -1,17 +1,20 @@
-@import 'susy';
-@import 'normalize';
-@import 'reset';
+// Normalization and grid mixins (susy).
+@import "susy";
+@import "normalize";
+@import "reset";
 
-@import 'variables';
-@import 'functions';
-@import 'mixins';
+// Theme variables, functions and mixins.
+@import "variables";
+@import "functions";
+@import "mixins";
 
-@import 'typography';
-@import 'headings';
-@import 'objects';
-@import 'gallery';
-@import 'forms';
-@import 'tables';
+// Components.
+@import "typography";
+@import "headings";
+@import "objects";
+@import "gallery";
+@import "forms";
+@import "tables";
 
 body {
   margin: 20px;

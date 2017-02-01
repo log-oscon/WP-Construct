@@ -9,7 +9,6 @@
     }],
     "block-closing-brace-newline-after": "always",
     "block-closing-brace-newline-before": "always-multi-line",
-    "block-closing-brace-space-after": "never",
     "block-closing-brace-space-before": "always-single-line",
     "block-no-empty": true,
     "block-opening-brace-newline-after": "always-multi-line",
@@ -84,7 +83,7 @@
     "selector-combinator-space-before": "always",
     "selector-list-comma-newline-after": "always",
     "selector-list-comma-newline-before": "never-multi-line",
-    "selector-list-comma-space-after": "never",
+    "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
     "selector-max-specificity": "0,4,0",
     "selector-no-id": true,
@@ -96,10 +95,10 @@
     "string-no-newline": true,
     "string-quotes": "double",
     "time-no-imperceptible": true,
-    "value-no-vendor-prefix": true,
     "value-list-comma-newline-after": "always-multi-line",
     "value-list-comma-newline-before": "never-multi-line",
     "value-list-comma-space-after": "always-single-line",
-    "value-list-comma-space-before": "never"
+    "value-list-comma-space-before": "never",
+    "value-no-vendor-prefix": true
   }
 }
