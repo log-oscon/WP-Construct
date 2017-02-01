@@ -78,7 +78,7 @@
 
   echo -e "${YELLOW}Building the project for deployment...${RESET}"
 
-  bash $ROOT_DIR/build.sh -l
+  bash $ROOT_DIR/.scripts/build.sh -l
 
   if [ 0 != $? ]; then
     echo -e "${RED}There was an error building the project.${RESET}"
