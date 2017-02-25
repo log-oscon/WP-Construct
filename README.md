@@ -2,6 +2,12 @@
 
 We use this as the foundation for new WordPress projects using the Genesis Framework at log.
 
+## Dependencies (Must Have Genesis)
+
+This setup requires you to have Genesis main theme (the Genesis Framework) in order for the child-theme to work. You can get it here: http://my.studiopress.com/themes/genesis/
+
+Note: Without this theme you can still take some things from the VVV configurations and Gulp setup in the child theme.
+
 ## Introduction
 
 This guide assumes some basic familiarity with the command line, the Git version control system and Vagrant.
