@@ -1,6 +1,6 @@
 <?php
 
-namespace Genesis_Starter;
+namespace logoscon\WP\Theme\Genesis_Starter;
 
 class Scripts {
 
