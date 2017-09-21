@@ -25,7 +25,7 @@ if [ -z "$WP_TESTS_DB_PASSWORD" ]; then
   WP_TESTS_DB_PASSWORD=wp
 fi
 
-cd $SCRIPTS_DIRg
+cd $SCRIPTS_DIR
 
 bash install-wp-tests.sh $WP_TESTS_DB_NAME $WP_TESTS_DB_USER $WP_TESTS_DB_PASSWORD
 
