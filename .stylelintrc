@@ -4,7 +4,7 @@
   ],
   "rules": {
     "at-rule-empty-line-before": ["always", {
-      "except": ["first-nested"],
+      "except": ["first-nested", "blockless-after-same-name-blockless"],
       "ignore": ["after-comment"]
     }],
     "block-closing-brace-newline-after": "always",
@@ -82,6 +82,11 @@
     "selector-list-comma-space-after": "always-single-line",
     "selector-list-comma-space-before": "never",
     "selector-max-specificity": "0,4,0",
+    "selector-max-type": 2,
+    "selector-no-qualifying-type": [true, {
+      "ignore": "attribute"
+    }],
+    "selector-max-id": 0,
     "selector-no-vendor-prefix": true,
     "selector-pseudo-element-colon-notation": "double",
     "selector-type-case": "lower",
