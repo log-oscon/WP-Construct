@@ -1,13 +1,15 @@
 #!/bin/bash
 
 ## CONFIGURATION ##
+## ssh-add /home/ubuntu/.ssh/log_suporte --> for support in AWS
 
 TITLE="WordPress Genesis Boilerplate"
 URL="genesis.wordpress.dev"
 DATABASE="genesis_wordpress_dev"
 ADMIN_EMAIL="engenharia@log.pt"
 THEME="genesis-starter"
-PLUGINS=(autoptimize redis-cache wordpress-seo wordpress-importer wp-hydra)
+PLUGINS="autoptimize redis-cache wordpress-seo wordpress-importer wp-hydra"
+SINGLE_SITE="true"
 
 ## That's it! You don't need to change anything below this line! ##
 
@@ -15,6 +17,7 @@ PLUGINS=(autoptimize redis-cache wordpress-seo wordpress-importer wp-hydra)
 
 noroot() {
   sudo -EH -u vagrant HTTP_HOST="${URL}" "$@";
+  ## sudo -EH -u ubuntu HTTP_HOST="${URL}" "$@"; --> for support in AWS
 }
 
 ## PROVISIONING ##
@@ -61,9 +64,18 @@ define( 'WP_CACHE_KEY_SALT', '$WP_CACHE_KEY_SALT' );
 define( 'WP_ENV', 'development' );
 PHP
 
-  echo " * Setting up \"$TITLE\" at $URL"
+  if [ "$SINGLE_SITE" != 'true'];
+  then
+    echo " * Setting up multisite \"$TITLE\" at $URL"
 
-  noroot wp core install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL"
+    noroot wp core multisite-install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL" --subdomains
+
+    noroot wp super-admin add admin
+  else
+    echo " * Setting up \"$TITLE\" at $URL"
+
+    noroot wp core install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL"
+  fi
 
   ## CREATE advanced-cache.php FILE ##
 
