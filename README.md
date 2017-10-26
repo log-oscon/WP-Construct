@@ -7,7 +7,7 @@ This virtual environment is powered by VVV 1.3. For projects powered by VVV 2.0,
 
 ```
 $ git clone git@github.com:log-oscon/wp-construct.git wp-construct
-$ git checkout v2.0
+$ git checkout tags/2.0
 ```
 
 ## Dependencies (Must Have Genesis)
