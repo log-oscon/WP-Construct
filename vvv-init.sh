@@ -9,7 +9,7 @@ DATABASE="genesis_wordpress_dev"
 ADMIN_EMAIL="engenharia@log.pt"
 THEME="genesis-starter"
 PLUGINS="autoptimize redis-cache wordpress-seo wordpress-importer wp-hydra"
-SINGLE_SITE="true"
+SINGLE_SITE=1
 
 ## That's it! You don't need to change anything below this line! ##
 
@@ -64,8 +64,7 @@ define( 'WP_CACHE_KEY_SALT', '$WP_CACHE_KEY_SALT' );
 define( 'WP_ENV', 'development' );
 PHP
 
-  if [ "$SINGLE_SITE" != 'true'];
-  then
+  if [ $SINGLE_SITE -eq 0 ]; then
     echo " * Setting up multisite \"$TITLE\" at $URL"
 
     noroot wp core multisite-install --url="$URL" --title="$TITLE" --admin_user=admin --admin_password=password --admin_email="$ADMIN_EMAIL" --subdomains
