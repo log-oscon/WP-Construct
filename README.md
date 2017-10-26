@@ -2,6 +2,14 @@
 
 We use this as the foundation for new WordPress projects using the Genesis Framework at log.
 
+## Special Note
+This virtual environment is powered by VVV 1.3. For projects powered by VVV 2.0, please checkout tag 2.0.
+
+```
+$ git clone git@github.com:log-oscon/wp-construct.git wp-construct
+$ git checkout v2.0
+```
+
 ## Dependencies (Must Have Genesis)
 
 This setup requires you to have Genesis main theme (the Genesis Framework) in order for the child-theme to work. You can get it here: http://my.studiopress.com/themes/genesis/
@@ -39,10 +47,10 @@ This project should be added to the `www` directory in your VVV setup.  If you'v
 Now clone the project into the `www` folder:
 
 ```
-$ git clone git@github.com:log-oscon/wp-genesis-boilerplate.git wp-genesis-boilerplate
+$ git clone git@github.com:log-oscon/wp-construct.git wp-construct
 ```
 
-This should create a new directory called `wp-genesis-boilerplate` containing all the project files.
+This should create a new directory called `wp-construct` containing all the project files.
 
 We're not done yet: VVV needs to setup and incorporate the project into its configuration. That is achieved by running:
 
