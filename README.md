@@ -1,4 +1,4 @@
-# WordPress Genesis Boilerplate
+# WP-Construct
 
 We use this as the foundation for new WordPress projects using the Genesis Framework at log.
 

@@ -1,11 +1,11 @@
 {
-  "name": "wp-genesis-boilerplate",
+  "name": "wp-construct",
   "version": "1.0.0",
   "description": "WordPress and Genesis Framework boilerplate project.",
   "license": "SEE LICENSE IN LICENSE",
   "repository": {
     "type": "git",
-    "url": "git@github.com:log-oscon/wp-genesis-boilerplate.git"
+    "url": "git@github.com:log-oscon/wp-construct.git"
   },
   "browser": {},
   "browserify": {

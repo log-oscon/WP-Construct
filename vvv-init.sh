@@ -2,7 +2,7 @@
 
 ## CONFIGURATION ##
 
-TITLE="WordPress Genesis Boilerplate"
+TITLE="WP-Construct"
 URL="genesis.wordpress.dev"
 DATABASE="genesis_wordpress_dev"
 ADMIN_EMAIL="engenharia@log.pt"
