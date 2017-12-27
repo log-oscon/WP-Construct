@@ -11,11 +11,18 @@
     {
       "type": "composer",
       "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://composer.log.pt"
     }
   ],
+  "autoload": {},
   "require": {
+    "php": ">=5.6",
     "composer-plugin-api": "^1.1",
     "goblindegook/syllables": "~0.3",
+    "logoscon/acf-plus": "dev-master",
     "wpackagist-plugin/akismet": "~3.1",
     "wpackagist-plugin/autoptimize": "~2.0",
     "wpackagist-plugin/black-studio-tinymce-widget": "~2.2",
@@ -38,10 +45,6 @@
     "installer-paths": {
       "vendor/{$vendor}/{$name}/": [
         "goblindegook/syllables"
-      ],
-      "wp-content/mu-plugins/{$name}/": [
-        "wpackagist-plugin/disable-emojis",
-        "wpackagist-plugin/disable-xml-rpc"
       ]
     }
   },
