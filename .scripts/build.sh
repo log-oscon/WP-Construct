@@ -33,7 +33,7 @@ fetch_git(){
   TARGETSUB=$3
   TARGETDIR="${ROOT}${TARGETSUB}${NAME}"
   if [ ! -z "${REPOSITORY}" ]; then
-    read -p "${YELLOW}Would you like to clone or install as submodule (c/s)? ${NC}" yn
+    read -p "Would you like to clone or install as submodule (c/s)? " yn
     case $yn in
         [Cc]* )
           mkdir $TARGETDIR
@@ -43,27 +43,27 @@ fetch_git(){
           echo "#Excluding submodule '${NAME}'\n!$TARGETSUB${NAME}" >> .gitignore
           git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
           break;;
-        * ) echo "${RED}Please answer c or s.${NC}";;
+        * ) echo "Please answer c or s.";;
     esac
   else
-    echo "${RED}Trying to fetch an invalid git url. exiting...${NC}"
+    echo "${RED}Trying to fetch an invalid git url. exiting..."
     exit
   fi
 }
 
 fetch_theme(){
   while true; do
-    read -p "\n${YELLOW}Would you like to install a(nother) theme?${NC}" yn
+    read -p "Would you like to install a(nother) theme? " yn
     case $yn in
       [Yy]* )
         shopt -s nullglob
         WPTHEMES=('git repository URL');
         WPTHEMES+=($(ls -d $THEMES | xargs -n1 basename))
-        echo "\n${YELLOW}Please select the theme to install:${NC}\n"
+        echo "Please select the theme to install:"
         select opt in "${WPTHEMES[@]}"
         do
           if [[ $opt = 'git repository URL' ]]; then
-            read -p "${YELLOW}Theme repository URL: ${NC}" REPOSITORY
+            read -p "Theme repository URL: " REPOSITORY
             THEMENAME=$(basename "$REPOSITORY")
             THEMENAME="${THEMENAME%.*}" #removing extension
             fetch_git $REPOSITORY $THEMENAME '/wp-content/themes/'
@@ -73,15 +73,15 @@ fetch_theme(){
           fi
         done
         break;;
-      [Nn]* ) exit;;
-      * ) echo "${RED}Please answer yes or no.${NC}";;
+      [Nn]* ) break;;
+      * ) echo "Please answer yes or no.";;
     esac
   done
 }
 
 build_theme(){
   THEMENAME=$1
-  read -p "${YELLOW}Would you like to build '${PLUGINNAME}'? ${NC}" yn
+  read -p "Would you like to build '${PLUGINNAME}'? " yn
   case $yn in
     [Yy]* )
       THEMEDIR="$ROOT/wp-content/themes/$THEMENAME"
@@ -91,15 +91,15 @@ build_theme(){
       npm install
       npm run build --if-present
       break;;
-    [Nn]* ) exit;;
-    * ) echo "${RED}Please answer yes or no.${NC}";;
+    [Nn]* ) break;;
+    * ) echo "Please answer yes or no.";;
   esac
   remove_other_themes $1;
 }
 
 remove_other_themes(){
   while true; do
-    read -p "${YELLOW}Would you like to remove the unused themes? ${NC}" yn
+    read -p "Would you like to remove the unused themes? " yn
     case $yn in
       [Yy]* )
         CURRENT=$1
@@ -110,23 +110,22 @@ remove_other_themes(){
           fi
         done
         break;;
-      [Nn]* ) exit;;
-      * ) echo "${RED}Please answer yes or no.${NC}";;
+      [Nn]* ) break;;
+      * ) echo "Please answer yes or no.";;
     esac
   done
 }
 
 fetch_plugins(){
   while true; do
-    read -p "\n${YELLOW}Would you like to install a(nother) plugin? ${NC}" yn
+    read -p "Would you like to install a(nother) plugin? " yn
     case $yn in
         [Yy]* )
-          read -p "${YELLOW}Plugin repository URL: ${NC}" REPOSITORY
-          REPOSITORY=$1
+          read -p "Plugin repository URL: " REPOSITORY
           PLUGINNAME=$(basename "$REPOSITORY")
           PLUGINNAME="${PLUGINNAME%.*}" #removing extension
           fetch_git $REPOSITORY $PLUGINNAME '/wp-content/plugins/'
-          read -p "${YELLOW}Would you like to build '${PLUGINNAME}'? ${NC}" yn
+          read -p "Would you like to build '${PLUGINNAME}'?" yn
           case $yn in
             [Yy]* )
               cd "${TARGETDIR}"
@@ -135,12 +134,12 @@ fetch_plugins(){
               npm run build --if-present
               cd "${ROOT}"
               break;;
-            [Nn]* ) exit;;
-           * ) echo "${RED}Please answer yes or no.${NC}";;
+            [Nn]* ) break;;
+            * ) echo "Please answer yes or no.";;
           esac
           break;;
-        [Nn]* ) exit;;
-        * ) echo "${RED}Please answer yes or no.${NC}";;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
     esac
   done
 }
