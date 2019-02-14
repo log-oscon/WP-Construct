@@ -29,8 +29,8 @@
     "wpackagist-plugin/disable-emojis": "~1.5",
     "wpackagist-plugin/disable-xml-rpc": "~1.0",
     "wpackagist-plugin/force-regenerate-thumbnails": "~2.0",
-    "wpackagist-plugin/google-analytics-for-wordpress": "~5.5",
-    "wpackagist-plugin/wordpress-seo": "^4.0"
+    "wpackagist-plugin/google-analytics-for-wordpress": "^7.4.2",
+    "wpackagist-plugin/wordpress-seo": "^9.6"
   },
   "require-dev": {
     "rarst/laps": "~1.2",
