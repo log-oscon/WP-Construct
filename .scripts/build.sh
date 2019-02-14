@@ -33,18 +33,20 @@ fetch_git(){
   TARGETSUB=$3
   TARGETDIR="${ROOT}${TARGETSUB}${NAME}"
   if [ ! -z "${REPOSITORY}" ]; then
-    read -p "Would you like to clone or install as submodule (c/s)? " yn
-    case $yn in
-        [Cc]* )
-          mkdir $TARGETDIR
-          git clone $REPOSITORY $TARGETDIR
-          break;;
-        [Ss]* )
-          echo "#Excluding submodule '${NAME}'\n!$TARGETSUB${NAME}" >> .gitignore
-          git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
-          break;;
-        * ) echo "Please answer c or s.";;
-    esac
+    while true; do
+      read -p "Would you like to clone or install as submodule (c/s)? " yn
+      case $yn in
+          [Cc]* )
+            mkdir $TARGETDIR
+            git clone $REPOSITORY $TARGETDIR
+            break;;
+          [Ss]* )
+            echo "#Excluding submodule '${NAME}'\n!$TARGETSUB${NAME}" >> .gitignore
+            git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
+            break;;
+          * ) echo "Please answer c or s.";;
+      esac
+    done
   else
     echo "${RED}Trying to fetch an invalid git url. exiting..."
     exit
@@ -53,7 +55,7 @@ fetch_git(){
 
 fetch_theme(){
   while true; do
-    read -p "Would you like to install a(nother) theme? " yn
+    read -p "Would you like to install a THEME? " yn
     case $yn in
       [Yy]* )
         shopt -s nullglob
@@ -63,7 +65,7 @@ fetch_theme(){
         select opt in "${WPTHEMES[@]}"
         do
           if [[ $opt = 'git repository URL' ]]; then
-            read -p "Theme repository URL: " REPOSITORY
+            read -p "Theme git repository URL: " REPOSITORY
             THEMENAME=$(basename "$REPOSITORY")
             THEMENAME="${THEMENAME%.*}" #removing extension
             fetch_git $REPOSITORY $THEMENAME '/wp-content/themes/'
@@ -71,8 +73,7 @@ fetch_theme(){
           else
             build_theme $opt
           fi
-        done
-        break;;
+        done;;
       [Nn]* ) break;;
       * ) echo "Please answer yes or no.";;
     esac
@@ -81,36 +82,18 @@ fetch_theme(){
 
 build_theme(){
   THEMENAME=$1
-  read -p "Would you like to build '${PLUGINNAME}'? " yn
-  case $yn in
-    [Yy]* )
-      THEMEDIR="$ROOT/wp-content/themes/$THEMENAME"
-      echo  "${GREEN}Building $1 theme…${NC}"
-      cd "${THEMEDIR}"
-      composer install --no-interaction $OPT_COMPOSER
-      npm install
-      npm run build --if-present
-      break;;
-    [Nn]* ) break;;
-    * ) echo "Please answer yes or no.";;
-  esac
-  remove_other_themes $1;
-}
-
-remove_other_themes(){
   while true; do
-    read -p "Would you like to remove the unused themes? " yn
+    read -p "Would you like to build '${THEMENAME}'? " yn
     case $yn in
       [Yy]* )
-        CURRENT=$1
-        WPTHEMES=($THEMES)
-        for THEME in "${WPTHEMES[@]}"; do
-          if [ $(basename $THEME) != $CURRENT ]; then
-            rm -rf $THEME
-          fi
-        done
-        break;;
-      [Nn]* ) break;;
+        THEMEDIR="$ROOT/wp-content/themes/$THEMENAME"
+        echo  "${GREEN}Building $1 theme…${NC}"
+        cd "${THEMEDIR}"
+        composer install --no-interaction $OPT_COMPOSER
+        npm install
+        npm run build --if-present
+        continue 3;;
+      [Nn]* ) continue 3;;
       * ) echo "Please answer yes or no.";;
     esac
   done
@@ -118,13 +101,14 @@ remove_other_themes(){
 
 fetch_plugins(){
   while true; do
-    read -p "Would you like to install a(nother) plugin? " yn
+    read -p "Would you like to install a PLUGIN? " yn
     case $yn in
-        [Yy]* )
-          read -p "Plugin repository URL: " REPOSITORY
-          PLUGINNAME=$(basename "$REPOSITORY")
-          PLUGINNAME="${PLUGINNAME%.*}" #removing extension
-          fetch_git $REPOSITORY $PLUGINNAME '/wp-content/plugins/'
+      [Yy]* )
+        read -p "Plugin git repository URL: " REPOSITORY
+        PLUGINNAME=$(basename "$REPOSITORY")
+        PLUGINNAME="${PLUGINNAME%.*}" #removing extension
+        fetch_git $REPOSITORY $PLUGINNAME '/wp-content/plugins/'
+        while true; do
           read -p "Would you like to build '${PLUGINNAME}'?" yn
           case $yn in
             [Yy]* )
@@ -137,20 +121,20 @@ fetch_plugins(){
             [Nn]* ) break;;
             * ) echo "Please answer yes or no.";;
           esac
-          break;;
-        [Nn]* ) break;;
-        * ) echo "Please answer yes or no.";;
+        done;;
+      [Nn]* ) break;;
+      * ) echo "Please answer yes or no.";;
     esac
   done
 }
 
 # BASE COMPOSER + NPM
 # =======================
-echo  "${GREEN}Installing Composer dependencies…${NC}"
-composer install --no-interaction $OPT_COMPOSER
+# echo  "${GREEN}Installing Composer dependencies…${NC}"
+# composer install --no-interaction $OPT_COMPOSER
 
-echo  "${GREEN}Installing NPM dependencies…${NC}"
-npm install
+# echo  "${GREEN}Installing NPM dependencies…${NC}"
+# npm install
 
 # SELECT THEME TO BUILD
 # =======================
