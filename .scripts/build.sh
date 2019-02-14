@@ -33,7 +33,7 @@ fetch_git(){
   TARGETSUB=$3
   TARGETDIR="${ROOT}${TARGETSUB}${NAME}"
   if [ ! -z "${REPOSITORY}" ]; then
-    read -p "Would you like to clone or install as submodule (c/s)?" yn
+    read -p "${YELLOW}Would you like to clone or install as submodule (c/s)? ${NC}" yn
     case $yn in
         [Cc]* )
           mkdir $TARGETDIR
@@ -43,27 +43,27 @@ fetch_git(){
           echo "#Excluding submodule '${NAME}'\n!$TARGETSUB${NAME}" >> .gitignore
           git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
           break;;
-        * ) echo "Please answer c or s.";;
+        * ) echo "${RED}Please answer c or s.${NC}";;
     esac
   else
-    echo "${RED}Trying to fetch an invalid git url. exiting..."
+    echo "${RED}Trying to fetch an invalid git url. exiting...${NC}"
     exit
   fi
 }
 
 fetch_theme(){
   while true; do
-    read -p "\nWould you like to install a(nother) theme?" yn
+    read -p "\n${YELLOW}Would you like to install a(nother) theme?${NC}" yn
     case $yn in
       [Yy]* )
         shopt -s nullglob
         WPTHEMES=('git repository URL');
         WPTHEMES+=($(ls -d $THEMES | xargs -n1 basename))
-        echo "\nPlease select the theme to install:\n"
+        echo "\n${YELLOW}Please select the theme to install:${NC}\n"
         select opt in "${WPTHEMES[@]}"
         do
           if [[ $opt = 'git repository URL' ]]; then
-            read -p "Write your theme repository URL: " REPOSITORY
+            read -p "${YELLOW}Theme repository URL: ${NC}" REPOSITORY
             THEMENAME=$(basename "$REPOSITORY")
             THEMENAME="${THEMENAME%.*}" #removing extension
             fetch_git $REPOSITORY $THEMENAME '/wp-content/themes/'
@@ -74,14 +74,14 @@ fetch_theme(){
         done
         break;;
       [Nn]* ) exit;;
-      * ) echo "Please answer yes or no.";;
+      * ) echo "${RED}Please answer yes or no.${NC}";;
     esac
   done
 }
 
 build_theme(){
   THEMENAME=$1
-  read -p "Would you like to build '${PLUGINNAME}'?" yn
+  read -p "${YELLOW}Would you like to build '${PLUGINNAME}'? ${NC}" yn
   case $yn in
     [Yy]* )
       THEMEDIR="$ROOT/wp-content/themes/$THEMENAME"
@@ -92,14 +92,14 @@ build_theme(){
       npm run build --if-present
       break;;
     [Nn]* ) exit;;
-    * ) echo "Please answer yes or no.";;
+    * ) echo "${RED}Please answer yes or no.${NC}";;
   esac
   remove_other_themes $1;
 }
 
 remove_other_themes(){
   while true; do
-    read -p "Would you like to remove the unused themes?" yn
+    read -p "${YELLOW}Would you like to remove the unused themes? ${NC}" yn
     case $yn in
       [Yy]* )
         CURRENT=$1
@@ -111,22 +111,22 @@ remove_other_themes(){
         done
         break;;
       [Nn]* ) exit;;
-      * ) echo "Please answer yes or no.";;
+      * ) echo "${RED}Please answer yes or no.${NC}";;
     esac
   done
 }
 
 fetch_plugins(){
   while true; do
-    read -p "Would you like to install a(nother) plugin?" yn
+    read -p "\n${YELLOW}Would you like to install a(nother) plugin? ${NC}" yn
     case $yn in
         [Yy]* )
-          read -p "Write your theme repository URL: " REPOSITORY
+          read -p "${YELLOW}Plugin repository URL: ${NC}" REPOSITORY
           REPOSITORY=$1
           PLUGINNAME=$(basename "$REPOSITORY")
-          PLUGINNAME="${THEMENAME%.*}" #removing extension
+          PLUGINNAME="${PLUGINNAME%.*}" #removing extension
           fetch_git $REPOSITORY $PLUGINNAME '/wp-content/plugins/'
-          read -p "Would you like to build '${PLUGINNAME}'?" yn
+          read -p "${YELLOW}Would you like to build '${PLUGINNAME}'? ${NC}" yn
           case $yn in
             [Yy]* )
               cd "${TARGETDIR}"
@@ -136,11 +136,11 @@ fetch_plugins(){
               cd "${ROOT}"
               break;;
             [Nn]* ) exit;;
-            * ) echo "Please answer yes or no.";;
+           * ) echo "${RED}Please answer yes or no.${NC}";;
           esac
           break;;
         [Nn]* ) exit;;
-        * ) echo "Please answer yes or no.";;
+        * ) echo "${RED}Please answer yes or no.${NC}";;
     esac
   done
 }
