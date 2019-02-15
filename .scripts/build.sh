@@ -9,7 +9,6 @@ OPT_COMPOSER=""
 
 RED='\033[1;31m'
 GREEN='\033[1;32m'
-YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
 # SETUP AND SANITY CHECKS
@@ -41,7 +40,7 @@ fetch_git(){
             sleep 3
             break;;
           [Ss]* )
-            echo "#Excluding submodule '${NAME}'\n!$TARGETSUB${NAME}" >> .gitignore
+            printf "#Excluding submodule '%s'\n%s" "$NAME" "!$TARGETSUB$NAME" >> .gitignore
             git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
             sleep 3
             break;;
@@ -76,7 +75,7 @@ fetch_theme(){
           fi
         done;;
       [Nn]* ) break;;
-      * ) echo "Please answer yes or no.";;
+      * ) echo "Please answer y or n.";;
     esac
   done
 }
@@ -84,7 +83,7 @@ fetch_theme(){
 build_theme(){
   THEMENAME=$1
   while true; do
-    read -p "Would you like to build '${THEMENAME}'? " yn
+    read -p "Would you like to build '${THEMENAME}' (y/n)? " yn
     case $yn in
       [Yy]* )
         THEMEDIR="$ROOT/wp-content/themes/$THEMENAME"
@@ -96,14 +95,14 @@ build_theme(){
         cd "${ROOT}"
         continue 3;;
       [Nn]* ) continue 3;;
-      * ) echo "Please answer yes or no.";;
+      * ) echo "Please answer y or n.";;
     esac
   done
 }
 
 fetch_plugins(){
   while true; do
-    read -p "Would you like to install a PLUGIN? " yn
+    read -p "Would you like to install a PLUGIN (y/n)? " yn
     case $yn in
       [Yy]* )
         read -p "Plugin git repository URL: " REPOSITORY
@@ -121,25 +120,25 @@ fetch_plugins(){
               cd "${ROOT}"
               break;;
             [Nn]* ) break;;
-            * ) echo "Please answer yes or no.";;
+            * ) echo "Please answer y or n.";;
           esac
         done;;
       [Nn]* ) break;;
-      * ) echo "Please answer yes or no.";;
+      * ) echo "Please answer y or n.";;
     esac
   done
 }
 
 clean_git(){
   while true; do
-    read -p "Would you like to clean the root .git folder? " yn
+    read -p "Would you like to clean the root .git folder (y/n)? " yn
     case $yn in
       [Yy]* )
         cd $ROOT
         rm -rf .git
        break;;
       [Nn]* ) break;;
-      * ) echo "Please answer yes or no.";;
+      * ) echo "Please answer y or n.";;
     esac
   done
 }
