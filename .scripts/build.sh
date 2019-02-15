@@ -39,16 +39,18 @@ fetch_git(){
           [Cc]* )
             mkdir $TARGETDIR
             git clone $REPOSITORY $TARGETDIR
+            sleep 3
             break;;
           [Ss]* )
             echo "#Excluding submodule '${NAME}'\n!$TARGETSUB${NAME}" >> .gitignore
             git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
+            sleep 3
             break;;
           * ) echo "Please answer c or s.";;
       esac
     done
   else
-    echo "${RED}Trying to fetch an invalid git url. exiting..."
+    echo "${RED}Trying to fetch an invalid git url. exiting...${NC}"
     exit
   fi
 }
@@ -109,7 +111,7 @@ fetch_plugins(){
         PLUGINNAME="${PLUGINNAME%.*}" #removing extension
         fetch_git $REPOSITORY $PLUGINNAME '/wp-content/plugins/'
         while true; do
-          read -p "Would you like to build '${PLUGINNAME}'?" yn
+          read -p "Would you like to build '${PLUGINNAME}'? " yn
           case $yn in
             [Yy]* )
               cd "${TARGETDIR}"
@@ -130,11 +132,11 @@ fetch_plugins(){
 
 # BASE COMPOSER + NPM
 # =======================
-# echo  "${GREEN}Installing Composer dependencies…${NC}"
-# composer install --no-interaction $OPT_COMPOSER
+echo  "${GREEN}Installing Composer dependencies…${NC}"
+composer install --no-interaction $OPT_COMPOSER
 
-# echo  "${GREEN}Installing NPM dependencies…${NC}"
-# npm install
+echo  "${GREEN}Installing NPM dependencies…${NC}"
+npm install
 
 # SELECT THEME TO BUILD
 # =======================
