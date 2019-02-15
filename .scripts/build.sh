@@ -40,7 +40,7 @@ fetch_git(){
             sleep 3
             break;;
           [Ss]* )
-            printf "#Excluding submodule '%s'\n%s" "$NAME" "!$TARGETSUB$NAME" >> .gitignore
+            printf "#Excluding submodule '%s'\n%s\n" "$NAME" "!$TARGETSUB$NAME" >> .gitignore
             git submodule add $REPOSITORY ".${TARGETSUB}${NAME}"
             sleep 3
             break;;
