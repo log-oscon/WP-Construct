@@ -131,6 +131,22 @@ fetch_plugins(){
   done
 }
 
+clean_git(){
+  while true; do
+    read -p "Would you like to clean the root .git folder? " yn
+    case $yn in
+      [Yy]* )
+        cd $ROOT
+        rm -rf .git
+       break;;
+      [Nn]* ) break;;
+      * ) echo "Please answer yes or no.";;
+    esac
+  done
+}
+
+
+
 # BASE COMPOSER + NPM
 # =======================
 echo  "${GREEN}Installing Composer dependencies…${NC}"
@@ -149,8 +165,7 @@ fetch_plugins
 
 # CLEAN GIT INFO
 # =======================
-cd $ROOT
-rm -rf .git
+clean_git
 
 
 echo  "${GREEN}Build finished.${NC}"
