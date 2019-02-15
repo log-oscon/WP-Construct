@@ -94,6 +94,7 @@ build_theme(){
         composer install --no-interaction $OPT_COMPOSER
         npm install
         npm run build --if-present
+        cd "${ROOT}"
         continue 3;;
       [Nn]* ) continue 3;;
       * ) echo "Please answer yes or no.";;
