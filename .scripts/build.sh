@@ -147,5 +147,11 @@ fetch_theme
 # =======================
 fetch_plugins
 
+# CLEAN GIT INFO
+# =======================
+cd $ROOT
+rm -rf .git
+
+
 echo  "${GREEN}Build finished.${NC}"
 exit
