@@ -20,7 +20,6 @@ while getopts l OPTION 2>/dev/null; do
         l) LIVE=1;;
     esac
 done
-
 if [ $LIVE -eq 1 ]; then
     OPT_COMPOSER="--no-dev --optimize-autoloader"
 fi
@@ -145,7 +144,21 @@ clean_git(){
   done
 }
 
+# =======================
+if [ $LIVE -eq 0 ]; then
 
+  # SELECT THEME TO BUILD
+  # =======================
+  fetch_theme
+
+  # SELECT PLUGINS TO BUILD
+  # =======================
+  fetch_plugins
+
+  # CLEAN GIT INFO
+  # =======================
+  clean_git
+fi
 
 # BASE COMPOSER + NPM
 # =======================
@@ -155,18 +168,9 @@ composer install --no-interaction $OPT_COMPOSER
 echo  "${GREEN}Installing NPM dependencies…${NC}"
 npm install
 
-# SELECT THEME TO BUILD
+# CUSTOM BUILDS HERE
 # =======================
-fetch_theme
 
-# SELECT PLUGINS TO BUILD
 # =======================
-fetch_plugins
-
-# CLEAN GIT INFO
-# =======================
-clean_git
-
-
 echo  "${GREEN}Build finished.${NC}"
 exit
