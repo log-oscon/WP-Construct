@@ -170,6 +170,19 @@ npm install
 # CUSTOM BUILDS HERE
 # =======================
 
+# BUILD Submodules when Live (Optional)
+# =======================
+# if [ $LIVE -eq 1 ]; then
+#   for MODULEDIR in `git config --file .gitmodules --get-regexp path | awk '{ print $2 }'`; do
+#     NAME=$(basename "$MODULEDIR")
+#     echo "${GREEN}Building $NAME...${NC}"
+#     cd "${ROOT}${moduledir}"
+#     composer install --no-interaction $OPT_COMPOSER
+#     npm install
+#     npm run build --if-present
+#     cd "${ROOT}"
+#   done
+# fi
 # =======================
 echo  "${GREEN}Build finished.${NC}"
 exit
