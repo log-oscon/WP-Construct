@@ -96,11 +96,11 @@ Check .scripts folder for available scripts.
 
 ## Windows troubleshooting<a name="windows-troubleshooting">&nbsp;</a>
 
-###Required windows version 
+### Required windows version 
 
 **Windows 10 Pro or Enterprise 64 bit** Operating System are the supported versions, Hyper-V is required. [Check this article](https://techcommunity.microsoft.com/t5/ITOps-Talk-Blog/Step-By-Step-Enabling-Hyper-V-for-use-on-Windows-10/ba-p/267945) if you need to enable Hyper-V. 
 
-###Dependencies
+### Dependencies
 
 * [Gitbash](https://gitforwindows.org/)
 * [php 7.2](https://windows.php.net/download#php-7.2)
@@ -109,7 +109,7 @@ Check .scripts folder for available scripts.
 * [python 2.7](https://www.python.org/downloads/release/python-2716/)
 
 
-###MSBUILD : error MSB4132: The tools version "2.0" is unrecognized. Available tools versions are "4.0
+### MSBUILD : error MSB4132: The tools version "2.0" is unrecognized. Available tools versions are "4.0
 
 If you face this error when building do as following: 
 
