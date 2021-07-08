@@ -35,6 +35,11 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 	'rems',
 ) );
 
+//* Inject inline sprite file.
+\add_action( 'genesis_before', function() {
+	echo file_get_contents( \get_stylesheet_directory() . '/public/images/sprite.svg' );
+}, 1 );
+
 //* Add viewport meta tag for mobile browsers
 \add_theme_support( 'genesis-responsive-viewport' );
 
@@ -47,9 +52,9 @@ define( 'CHILD_THEME_VERSION', '1.0.0' );
 //* Setup theme
 \add_action( 'after_setup_theme', function () {
 	$components = array(
-		'scripts'    => new \Genesis_Starter\Scripts(),
-		'shortcodes' => new \Genesis_Starter\Shortcodes(),
-		'styles'     => new \Genesis_Starter\Styles(),
+		'scripts'    => new \logoscon\WP\Theme\Genesis_Starter\Scripts(),
+		'shortcodes' => new \logoscon\WP\Theme\Genesis_Starter\Shortcodes(),
+		'styles'     => new \logoscon\WP\Theme\Genesis_Starter\Styles(),
 	);
 
 	/**

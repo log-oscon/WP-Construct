@@ -73,20 +73,23 @@ export default {
       ]
     }
   },
-  svgSpriteSrc: '**/svg-sprite/**/*.svg',
   svgSprite: {
-    svg: {
-      rootAttributes: {
-        height: 0,
-        width:  0,
-        style:  'position: absolute'
-      }
-    },
-    mode: {
-      inline: true,
-      symbol: {
-        dest: '',
-        sprite: 'sprite.svg'
+    src: src + '/svg-sprite/**.*svg',
+    dest: dest + '/images',
+    config: {
+      svg: {
+        rootAttributes: {
+          height: 0,
+          width: 0,
+          style: 'position: absolute'
+        },
+        transform: ['svgo']
+      },
+      mode: {
+        symbol: {
+          dest: '',
+          sprite: 'sprite.svg'
+        }
       }
     }
   },
